@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odey Mofokeng | Statistical Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#f59e0b',
+                        accent: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .pdf-container {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+        .upload-zone {
+            border: 2px dashed #cbd5e1;
+            transition: all 0.3s ease;
+        }
+        .upload-zone:hover {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-serif text-2xl font-bold text-primary">OM</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-primary transition-colors">About</a>
+                        <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                        <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                        <a href="#education" class="hover:text-primary transition-colors">Education</a>
+                        <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="toggleDarkMode()" class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                    <a href="mailto:mofokengodey@gmail.com" class="bg-primary text-white px-4 py-2 rounded-full hover:bg-blue-800 transition-colors text-sm font-medium">
+                        Hire Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-sm font-medium">
+                    <span class="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
+                    Available for Opportunities
+                </div>
+                <h1 class="text-5xl md:text-7xl font-serif font-bold leading-tight">
+                    Odey <span class="gradient-text">Mofokeng</span>
+                </h1>
+                <p class="text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Actuarial Science Graduate & Mathematical Statistics Specialist
+                </p>
+                <p class="text-slate-600 dark:text-slate-400 max-w-lg">
+                    Transforming complex spatial and statistical data into actionable insights. 
+                    Expert in R, SQL, and predictive modelling with award-winning research experience.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#projects" class="bg-primary text-white px-8 py-3 rounded-full hover:bg-blue-800 transition-all transform hover:scale-105 font-medium">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="border-2 border-primary text-primary dark:text-white px-8 py-3 rounded-full hover:bg-primary hover:text-white transition-all font-medium">
+                        Get in Touch
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6 pt-6 text-slate-600 dark:text-slate-400">
+                    <a href="https://linkedin.com" target="_blank" class="hover:text-primary text-2xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank" class="hover:text-primary text-2xl"><i class="fab fa-github"></i></a>
+                    <a href="mailto:mofokengodey@gmail.com" class="hover:text-primary text-2xl"><i class="fas fa-envelope"></i></a>
+                    <span class="text-sm">📍 Lenasia South, Gauteng</span>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl transform rotate-6 opacity-20"></div>
+                <div class="relative bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-2xl">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 dark:bg-slate-700 p-4 rounded-2xl text-center">
+                            <div class="text-3xl font-bold text-primary">7</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-300">Actuarial Exams</div>
+                        </div>
+                        <div class="bg-amber-50 dark:bg-slate-700 p-4 rounded-2xl text-center">
+                            <div class="text-3xl font-bold text-secondary">1st</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-300">SASA Prize</div>
+                        </div>
+                        <div class="bg-purple-50 dark:bg-slate-700 p-4 rounded-2xl text-center">
+                            <div class="text-3xl font-bold text-purple-600">MSc</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-300">In Progress</div>
+                        </div>
+                        <div class="bg-green-50 dark:bg-slate-700 p-4 rounded-2xl text-center">
+                            <div class="text-3xl font-bold text-green-600">Dist</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-300">Honours</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white dark:bg-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold mb-4">Featured Projects</h2>
+                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    A collection of my research and analytical work. Click on any project to view 
+                    documentation, code snippets, and uploaded files.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <!-- Project 1: Regression Kriging -->
+                <div class="project-card bg-slate-50 dark:bg-slate-700 rounded-2xl overflow-hidden card-hover cursor-pointer" onclick="openProjectModal('kriging')">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Spatial Statistics</span>
+                            <span class="text-amber-500"><i class="fas fa-trophy"></i> 1st Prize</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Regression Kriging for Wastewater Surveillance</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+                            Honours research project analysing spatial wastewater data using geostatistical modelling in R.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">R</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Geostatistics</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Kriging</span>
+                        </div>
+                        <div class="flex items-center text-primary text-sm font-medium">
+                            <span>View Documentation</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: ASA DataFest -->
+                <div class="project-card bg-slate-50 dark:bg-slate-700 rounded-2xl overflow-hidden card-hover cursor-pointer" onclick="openProjectModal('datafest')">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded-full">Data Competition</span>
+                            <span class="text-slate-500 text-xs">2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">ASA DataFest 2025</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+                            Team-based analysis of large real-world datasets under time constraints with industry presentation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">EDA</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Teamwork</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Visualization</span>
+                        </div>
+                        <div class="flex items-center text-primary text-sm font-medium">
+                            <span>View Documentation</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Reliability Analysis -->
+                <div class="project-card bg-slate-50 dark:bg-slate-700 rounded-2xl overflow-hidden card-hover cursor-pointer" onclick="openProjectModal('reliability')">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full">Survival Analysis</span>
+                            <span class="text-slate-500 text-xs">Coursework</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Statistical Elements of Reliability Analysis</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+                            Lifetime data modelling and failure time analysis mini-project.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Survival</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">R</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Modelling</span>
+                        </div>
+                        <div class="flex items-center text-primary text-sm font-medium">
+                            <span>View Documentation</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Applied Sampling -->
+                <div class="project-card bg-slate-50 dark:bg-slate-700 rounded-2xl overflow-hidden card-hover cursor-pointer" onclick="openProjectModal('sampling')">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-random"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 text-xs rounded-full">Survey Design</span>
+                            <span class="text-amber-500 text-xs">Top Performance</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Applied Sampling Project</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+                            Survey design, estimation techniques, and variance analysis.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Sampling</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Variance</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Estimation</span>
+                        </div>
+                        <div class="flex items-center text-primary text-sm font-medium">
+                            <span>View Documentation</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Biostatistics -->
+                <div class="project-card bg-slate-50 dark:bg-slate-700 rounded-2xl overflow-hidden card-hover cursor-pointer" onclick="openProjectModal('biostats')">
+                    <div class="h-48 bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-xs rounded-full">Health Data</span>
+                            <span class="text-slate-500 text-xs">Coursework</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Biostatistics Application</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+                            Statistical methods applied to biological and health-related data.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Biostats</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Health</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">R</span>
+                        </div>
+                        <div class="flex items-center text-primary text-sm font-medium">
+                            <span>View Documentation</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add New Project Card -->
+                <div class="border-2 border-dashed border-slate-300 dark:border-slate-600 rounded-2xl flex flex-col items-center justify-center p-8 text-slate-400 hover:border-primary hover:text-primary transition-colors cursor-pointer" onclick="alert('To add a new project, duplicate any project card in the HTML and update the content, or edit the projectsData object in the script section.')">
+                    <i class="fas fa-plus text-4xl mb-4"></i>
+                    <span class="font-medium">Add New Project</span>
+                    <span class="text-sm mt-2 text-center">Edit HTML to add more projects</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="fixed inset-0 bg-black/50 hidden z-50 overflow-y-auto backdrop-blur-sm">
+        <div class="min-h-screen px-4 text-center">
+            <div class="fixed inset-0 transition-opacity" onclick="closeProjectModal()"></div>
+            
+            <span class="inline-block h-screen align-middle" aria-hidden="true">&#8203;</span>
+            
+            <div class="inline-block w-full max-w-5xl p-6 my-8 text-left align-middle transition-all transform bg-white dark:bg-slate-800 shadow-xl rounded-2xl relative">
+                <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div id="modalContent">
+                    <!-- Content injected via JavaScript -->
+                </div>
+
+                <!-- File Upload Section -->
+                <div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
+                    <h4 class="text-lg font-bold mb-4 flex items-center">
+                        <i class="fas fa-folder-open mr-2 text-primary"></i>
+                        Project Documentation & Files
+                    </h4>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- PDF Viewer -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Research Paper / PDF</label>
+                            <div class="upload-zone rounded-lg p-8 text-center cursor-pointer" onclick="document.getElementById('pdfInput').click()">
+                                <input type="file" id="pdfInput" class="hidden" accept=".pdf" onchange="handleFileUpload(this, 'pdf')">
+                                <i class="fas fa-file-pdf text-4xl text-red-500 mb-2"></i>
+                                <p class="text-sm text-slate-600 dark:text-slate-400">Click to upload PDF or</p>
+                                <p class="text-xs text-slate-500 mt-1">Paste URL in code to make permanent</p>
+                            </div>
+                            <div id="pdfPreview" class="hidden mt-4">
+                                <iframe class="pdf-container rounded-lg" id="pdfFrame"></iframe>
+                            </div>
+                        </div>
+
+                        <!-- Image Gallery -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Images & Visualizations</label>
+                            <div class="upload-zone rounded-lg p-8 text-center cursor-pointer" onclick="document.getElementById('imageInput').click()">
+                                <input type="file" id="imageInput" class="hidden" accept="image/*" multiple onchange="handleFileUpload(this, 'image')">
+                                <i class="fas fa-images text-4xl text-blue-500 mb-2"></i>
+                                <p class="text-sm text-slate-600 dark:text-slate-400">Click to upload images</p>
+                                <p class="text-xs text-slate-500 mt-1">Posters, charts, screenshots</p>
+                            </div>
+                            <div id="imagePreview" class="hidden mt-4 grid grid-cols-2 gap-2">
+                                <!-- Images injected here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
+                        <p class="text-sm text-blue-800 dark:text-blue-200">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <strong>Note:</strong> Files uploaded here are stored temporarily in your browser. 
+                            To make them permanent for public viewing, upload files to your GitHub repository 
+                            in an "assets" folder and update the file URLs in the HTML code.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-serif font-bold text-center mb-12">Technical Expertise</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-code mr-2 text-primary"></i> Programming
+                    </h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>R (tidyverse, ggplot2, caret)</span><span>95%</span></div>
+                            <div class="w-full bg-slate-200 rounded-full h-2"><div class="bg-primary h-2 rounded-full" style="width: 95%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>SQL</span><span>85%</span></div>
+                            <div class="w-full bg-slate-200 rounded-full h-2"><div class="bg-primary h-2 rounded-full" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Excel (Advanced)</span><span>90%</span></div>
+                            <div class="w-full bg-slate-200 rounded-full h-2"><div class="bg-primary h-2 rounded-full" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Power BI</span><span>80%</span></div>
+                            <div class="w-full bg-slate-200 rounded-full h-2"><div class="bg-primary h-2 rounded-full" style="width: 80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-brain mr-2 text-secondary"></i> Statistical Methods
+                    </h3>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Regression Analysis</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Spatial Statistics & Geostatistics</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Predictive Modelling</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Time Series Analysis</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Survival Analysis</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Machine Learning</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-briefcase mr-2 text-purple-500"></i> Actuarial
+                    </h3>
+                    <div class="grid grid-cols-2 gap-2 text-sm">
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">A111</div>
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">A112</div>
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">A211</div>
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">A212</div>
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">A213</div>
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">A113</div>
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">N111</div>
+                        <div class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 p-2 rounded text-center font-bold">7 Passed</div>
+                    </div>
+                    <p class="mt-3 text-xs text-slate-500">Professional Actuarial Exams (IFOA/ASSA)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Timeline -->
+    <section id="education" class="py-20 bg-white dark:bg-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-serif font-bold text-center mb-12">Education</h2>
+            
+            <div class="space-y-8">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="flex-grow pb-8 border-l-2 border-slate-200 dark:border-slate-600 pl-8 relative">
+                        <div class="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                            <h3 class="text-xl font-bold">MSc in Mathematical Statistics</h3>
+                            <span class="text-sm bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full">2025</span>
+                        </div>
+                        <p class="text-primary font-medium">University of the Witwatersrand</p>
+                        <p class="text-slate-600 dark:text-slate-400 mt-2">Dissertation in progress. Focus on spatial statistics and machine learning applications.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="flex-grow pb-8 border-l-2 border-slate-200 dark:border-slate-600 pl-8 relative">
+                        <div class="absolute -left-2 top-0 w-4 h-4 bg-secondary rounded-full"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                            <h3 class="text-xl font-bold">BSc Honours in Mathematical Statistics</h3>
+                            <span class="text-sm bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 px-3 py-1 rounded-full">2024</span>
+                        </div>
+                        <p class="text-primary font-medium">University of the Witwatersrand</p>
+                        <p class="text-slate-600 dark:text-slate-400 mt-2">Graduated with Distinction. Coursework: Spatial Statistics, Statistical ML, Operations Research.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="flex-grow pb-8 border-l-2 border-slate-200 dark:border-slate-600 pl-8 relative">
+                        <div class="absolute -left-2 top-0 w-4 h-4 bg-purple-600 rounded-full"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                            <h3 class="text-xl font-bold">BSc in Actuarial Science</h3>
+                            <span class="text-sm bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full">2022-2024</span>
+                        </div>
+                        <p class="text-primary font-medium">University of the Witwatersrand</p>
+                        <p class="text-slate-600 dark:text-slate-400 mt-2">Actuarial Reserving, Survival Analysis, Time Series, Actuarial Economics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="py-16 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow">
+                    <i class="fas fa-trophy text-4xl text-yellow-500 mb-3"></i>
+                    <h3 class="font-bold">First Prize</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">SASA Conference 2025</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow">
+                    <i class="fas fa-medal text-4xl text-blue-500 mb-3"></i>
+                    <h3 class="font-bold">Top 100 Achiever</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Free State Province</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow">
+                    <i class="fas fa-percentage text-4xl text-green-500 mb-3"></i>
+                    <h3 class="font-bold">100%</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Physical Sciences NSC</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow">
+                    <i class="fas fa-user-graduate text-4xl text-purple-500 mb-3"></i>
+                    <h3 class="font-bold">SADP Alumni</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Actuarial Development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-serif font-bold mb-6">Let's Work Together</h2>
+            <p class="text-xl mb-8 text-blue-100">Available for data science, actuarial, and statistical consulting opportunities.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+                <a href="mailto:mofokengodey@gmail.com" class="flex items-center justify-center gap-3 bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition-colors">
+                    <i class="fas fa-envelope"></i>
+                    mofokengodey@gmail.com
+                </a>
+                <a href="tel:+27639633131" class="flex items-center justify-center gap-3 border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-colors">
+                    <i class="fas fa-phone"></i>
+                    +27 63 963 3131
+                </a>
+            </div>
+
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-2xl hover:text-secondary transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-2xl hover:text-secondary transition-colors"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-2xl hover:text-secondary transition-colors"><i class="fas fa-globe"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+        <p>&copy; 2025 Odey Mofokeng. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Project Data - EDIT THIS OBJECT TO ADD/PERSIST PROJECT FILES
+        const projectsData = {
+            kriging: {
+                title: "Regression Kriging for Wastewater Surveillance",
+                description: "Developed regression-kriging models in R to analyse spatial wastewater data and capture spatial dependencies. Performed data preprocessing, feature engineering, and spatial cross-validation.",
+                details: "This research project involved developing advanced spatial statistical models to analyse wastewater surveillance data. The study compared regression-kriging approaches against standard kriging methods using rigorous diagnostic metrics. The work was presented at the South African Statistical Association (SASA) Annual Conference where it earned First Prize for Best Poster.",
+                skills: ["R", "Geostatistics", "Spatial Cross-Validation", "Regression Kriging"],
+                // TO MAKE FILES PERMANENT: Upload to GitHub/assets folder and paste URLs here
+                pdfUrl: "", // Example: "assets/kriging/research-paper.pdf"
+                images: []  // Example: ["assets/kriging/poster.jpg", "assets/kriging/map.png"]
+            },
+            datafest: {
+                title: "ASA DataFest 2025",
+                description: "Collaborated in a team to analyse large real-world datasets under time constraints. Employed exploratory data analysis, statistical modelling, and visualisation techniques.",
+                details: "Participated in the American Statistical Association DataFest competition, working collaboratively to extract insights from complex datasets. The project involved rapid prototyping of analytical solutions and presentation of findings to a panel of academic and industry judges.",
+                skills: ["Team Collaboration", "EDA", "Statistical Modelling", "Data Visualization"],
+                pdfUrl: "",
+                images: []
+            },
+            reliability: {
+                title: "Statistical Elements of Reliability Analysis",
+                description: "Mini-project focusing on lifetime data modelling and failure time analysis using survival analysis techniques.",
+                details: "An in-depth analysis of reliability data focusing on modelling failure times and understanding lifetime distributions. The project applied various survival analysis techniques to real or simulated reliability datasets.",
+                skills: ["Survival Analysis", "Lifetime Data", "Failure Modelling"],
+                pdfUrl: "",
+                images: []
+            },
+            sampling: {
+                title: "Applied Sampling Project",
+                description: "Top-performing mini-project involving survey design, estimation techniques, and variance analysis.",
+                details: "Comprehensive survey methodology project covering sampling design, implementation of estimation procedures, and thorough variance analysis. Recognized as top-performing work in the cohort.",
+                skills: ["Survey Design", "Estimation", "Variance Analysis"],
+                pdfUrl: "",
+                images: []
+            },
+            biostats: {
+                title: "Biostatistics Application",
+                description: "Applying statistical methods to biological and health-related data.",
+                details: "Statistical analysis of health and biological data, applying appropriate biostatistical methods to draw meaningful conclusions from medical or biological datasets.",
+                skills: ["Biostatistics", "Health Data", "Statistical Methods"],
+                pdfUrl: "",
+                images: []
+            }
+        };
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+
+        // Modal Functions
+        function openProjectModal(projectId) {
+            const project = projectsData[projectId];
+            const modal = document.getElementById('projectModal');
+            const content = document.getElementById('modalContent');
+            
+            content.innerHTML = `
+                <h2 class="text-3xl font-bold mb-4 text-primary dark:text-blue-400">${project.title}</h2>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    ${project.skills.map(skill => `<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">${skill}</span>`).join('')}
+                </div>
+                <p class="text-slate-700 dark:text-slate-300 mb-4 leading-relaxed">${project.details}</p>
+                <div class="bg-slate-50 dark:bg-slate-700 p-4 rounded-lg">
+                    <h4 class="font-bold mb-2">Key Achievements:</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">${project.description}</p>
+                </div>
+            `;
+
+            // Load saved files if URLs exist in data
+            if (project.pdfUrl) {
+                document.getElementById('pdfPreview').classList.remove('hidden');
+                document.getElementById('pdfFrame').src = project.pdfUrl;
+            }
+            
+            if (project.images.length > 0) {
+                const imgContainer = document.getElementById('imagePreview');
+                imgContainer.classList.remove('hidden');
+                imgContainer.innerHTML = project.images.map(img => 
+                    `<img src="${img}" class="rounded-lg shadow-md w-full h-32 object-cover">`
+                ).join('');
+            }
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProjectModal() {
+            document.getElementById('projectModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            // Clear temporary file previews
+            document.getElementById('pdfPreview').classList.add('hidden');
+            document.getElementById('imagePreview').classList.add('hidden');
+            document.getElementById('pdfFrame').src = '';
+        }
+
+        // File Upload Handler (Client-side only for preview)
+        function handleFileUpload(input, type) {
+            const file = input.files[0];
+            if (!file) return;
+
+            const url = URL.createObjectURL(file);
+            
+            if (type === 'pdf') {
+                document.getElementById('pdfPreview').classList.remove('hidden');
+                document.getElementById('pdfFrame').src = url;
+            } else if (type === 'image') {
+                const container = document.getElementById('imagePreview');
+                container.classList.remove('hidden');
+                
+                Array.from(input.files).forEach(file => {
+                    const imgUrl = URL.createObjectURL(file);
+                    const img = document.createElement('img');
+                    img.src = imgUrl;
+                    img.className = 'rounded-lg shadow-md w-full h-32 object-cover';
+                    container.appendChild(img);
+                });
+            }
+
+            alert('File loaded for preview! To make this permanent, upload this file to your website hosting (GitHub/Netlify) and update the projectsData object in the code.');
+        }
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
