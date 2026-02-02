@@ -300,12 +300,33 @@
                     <i class="fas fa-times"></i>
                 </button>
 
-                <div id="modalContent">
+                                <div id="modalContent">
                     <!-- Content injected via JavaScript -->
                 </div>
-           </div>
-        </div>
-    </div>
+                
+                <!-- Project Files Display - ADD THIS SECTION -->
+                <div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
+                    <h4 class="text-lg font-bold mb-4 flex items-center">
+                        <i class="fas fa-folder-open mr-2 text-primary"></i>
+                        Project Documentation & Files
+                    </h4>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- PDF Display -->
+                        <div id="pdfPreview" class="hidden space-y-2">
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Research Paper / PDF</label>
+                            <iframe class="pdf-container rounded-lg" id="pdfFrame"></iframe>
+                        </div>
+
+                        <!-- Images Display -->
+                        <div id="imagePreview" class="hidden space-y-2">
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Images & Visualizations</label>
+                            <div id="imagesGrid" class="grid grid-cols-2 gap-2">
+                                <!-- Images injected here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
     <!-- Skills Section -->
     <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-900">
@@ -571,7 +592,7 @@
             if (project.images.length > 0) {
                 const imgContainer = document.getElementById('imagePreview');
                 imgContainer.classList.remove('hidden');
-                imgContainer.innerHTML = project.images.map(img => 
+                document.getElementById('imagesGrid').innerHTML = project.images.map(img => 
                     `<img src="${img}" class="rounded-lg shadow-md w-full h-32 object-cover">`
                 ).join('');
             }
