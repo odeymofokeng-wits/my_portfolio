@@ -588,33 +588,6 @@
             document.getElementById('imagePreview').classList.add('hidden');
             document.getElementById('pdfFrame').src = '';
         }
-
-        // File Upload Handler (Client-side only for preview)
-        function handleFileUpload(input, type) {
-            const file = input.files[0];
-            if (!file) return;
-
-            const url = URL.createObjectURL(file);
-            
-            if (type === 'pdf') {
-                document.getElementById('pdfPreview').classList.remove('hidden');
-                document.getElementById('pdfFrame').src = url;
-            } else if (type === 'image') {
-                const container = document.getElementById('imagePreview');
-                container.classList.remove('hidden');
-                
-                Array.from(input.files).forEach(file => {
-                    const imgUrl = URL.createObjectURL(file);
-                    const img = document.createElement('img');
-                    img.src = imgUrl;
-                    img.className = 'rounded-lg shadow-md w-full h-32 object-cover';
-                    container.appendChild(img);
-                });
-            }
-
-            alert('File loaded for preview! To make this permanent, upload this file to your website hosting (GitHub/Netlify) and update the projectsData object in the code.');
-        }
-
         // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
