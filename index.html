@@ -17,284 +17,66 @@
                         serif: ['Playfair Display', 'serif'],
                     },
                     colors: {
-                        emerald: {
-                            deep: '#065f46',
-                            DEFAULT: '#047857',
-                            light: '#059669',
-                        },
-                        gold: {
-                            deep: '#b45309',
-                            DEFAULT: '#d97706',
-                            light: '#f59e0b',
-                        },
-                        burgundy: {
-                            deep: '#881337',
-                            DEFAULT: '#9f1239',
-                            light: '#be123c',
-                        },
-                        cream: {
-                            DEFAULT: '#fefdfb',
-                            light: '#fffbeb',
-                            dark: '#fefce8',
-                        },
-                        charcoal: {
-                            DEFAULT: '#1c1917',
-                            light: '#292524',
-                        },
-                        warmgray: {
-                            50: '#fafaf9',
-                            100: '#f5f5f4',
-                            200: '#e7e5e4',
-                            300: '#d6d3d1',
-                            400: '#a8a29e',
-                            500: '#78716c',
-                            600: '#57534e',
-                            700: '#44403c',
-                            800: '#292524',
-                            900: '#1c1917',
-                        },
+                        primary: '#1e3a8a',
+                        secondary: '#f59e0b',
+                        accent: '#0f172a',
                     }
                 }
             }
         }
     </script>
     <style>
-        /* Gradient text */
         .gradient-text {
-            background: linear-gradient(135deg, #047857 0%, #d97706 50%, #9f1239 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .dark .gradient-text {
-            background: linear-gradient(135deg, #059669 0%, #f59e0b 50%, #be123c 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        /* Gradient border */
-        .gradient-border {
-            position: relative;
-            background: linear-gradient(#fefdfb, #fefdfb) padding-box,
-                linear-gradient(135deg, #047857, #d97706, #9f1239) border-box;
-            border: 2px solid transparent;
-        }
-        .dark .gradient-border {
-            background: linear-gradient(#292524, #292524) padding-box,
-                linear-gradient(135deg, #059669, #f59e0b, #be123c) border-box;
-        }
-
-        /* Glass effect */
-        .glass {
-            background: rgba(254, 253, 251, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(231, 229, 228, 0.3);
-        }
-        .dark .glass {
-            background: rgba(41, 37, 36, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Card hover */
         .card-hover {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
         }
         .card-hover:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-
-        /* 3D Tilt effect */
-        .tilt-card {
-            transform-style: preserve-3d;
-            transition: transform 0.3s ease;
-        }
-
-        /* Animated underline */
-        .nav-underline {
-            position: relative;
-        }
-        .nav-underline::after {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 50%;
-            background: linear-gradient(90deg, #047857, #d97706);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-        .nav-underline:hover::after {
-            width: 100%;
-        }
-        .dark .nav-underline::after {
-            background: linear-gradient(90deg, #059669, #f59e0b);
-        }
-
-        /* Floating animation */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-        }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        /* Floating reverse */
-        @keyframes float-reverse {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(20px) rotate(-5deg); }
-        }
-        .animate-float-reverse {
-            animation: float-reverse 8s ease-in-out infinite;
-        }
-
-        /* Pulse glow */
-        @keyframes pulse-glow {
-            0%, 100% { opacity: 0.4; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.05); }
-        }
-        .animate-pulse-glow {
-            animation: pulse-glow 4s ease-in-out infinite;
-        }
-
-        /* Typewriter */
-        @keyframes typewriter {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #047857; }
-        }
-
-        /* Particle float */
-        @keyframes particle-float {
-            0% { transform: translate(0, 0); opacity: 0.2; }
-            50% { transform: translate(20px, -30px); opacity: 0.6; }
-            100% { transform: translate(0, 0); opacity: 0.2; }
-        }
-        .particle {
-            animation: particle-float 8s ease-in-out infinite;
-        }
-
-        /* Skill bar fill */
-        @keyframes skill-fill {
-            from { width: 0; }
-        }
-        .skill-animate {
-            animation: skill-fill 1.5s ease-out forwards;
-        }
-
-        /* Counter animation */
-        @keyframes count-up {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Warm shadow */
-        .shadow-warm {
-            box-shadow: 0 4px 20px rgba(4, 120, 87, 0.1), 0 2px 8px rgba(217, 119, 6, 0.05);
-        }
-        .shadow-warm-lg {
-            box-shadow: 0 10px 40px rgba(4, 120, 87, 0.15), 0 4px 16px rgba(217, 119, 6, 0.08);
-        }
-
-        /* PDF container */
         .pdf-container {
             width: 100%;
             height: 600px;
             border: none;
         }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
+        .upload-zone {
+            border: 2px dashed #cbd5e1;
+            transition: all 0.3s ease;
         }
-        ::-webkit-scrollbar-track {
-            background: #f5f5f4;
-            border-radius: 4px;
-        }
-        .dark ::-webkit-scrollbar-track {
-            background: #292524;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #a8a29e;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #78716c;
-        }
-
-        /* Smooth theme transition */
-        * {
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-
-        /* Focus styles */
-        *:focus-visible {
-            outline: 2px solid #047857;
-            outline-offset: 2px;
-        }
-        .dark *:focus-visible {
-            outline-color: #059669;
-        }
-
-        /* Floating formulas */
-        .math-formula {
-            position: absolute;
-            font-family: monospace;
-            opacity: 0.04;
-            pointer-events: none;
-        }
-        .dark .math-formula {
-            opacity: 0.06;
-        }
-
-        /* Rotating ring */
-        @keyframes rotate-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .rotate-ring {
-            animation: rotate-slow 60s linear infinite;
-        }
-        .rotate-ring-reverse {
-            animation: rotate-slow 45s linear infinite reverse;
+        .upload-zone:hover {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
         }
     </style>
 </head>
-<body class="bg-cream dark:bg-charcoal text-warmgray-800 dark:text-warmgray-100 transition-colors duration-300">
-
-    <!-- Custom Cursor -->
-    <div id="custom-cursor" class="fixed w-4 h-4 rounded-full pointer-events-none z-[9999] hidden md:block" style="background: #047857; transform: translate(-50%, -50%);"></div>
-    <div id="cursor-ring" class="fixed w-10 h-10 rounded-full pointer-events-none z-[9998] hidden md:block" style="border: 1px solid rgba(4, 120, 87, 0.5); transform: translate(-50%, -50%);"></div>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
 
     <!-- Navigation -->
-    <nav class="fixed w-full glass z-50 transition-all duration-300" id="navbar">
+    <nav class="fixed w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <span class="font-serif text-2xl font-bold gradient-text">OM</span>
+                    <span class="font-serif text-2xl font-bold text-primary">OM</span>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#about" class="nav-underline text-warmgray-600 dark:text-warmgray-300 hover:text-emerald dark:hover:text-emerald-light transition-colors">About</a>
-                        <a href="#quote" class="nav-underline text-warmgray-600 dark:text-warmgray-300 hover:text-emerald dark:hover:text-emerald-light transition-colors">Philosophy</a>
-                        <a href="#projects" class="nav-underline text-warmgray-600 dark:text-warmgray-300 hover:text-emerald dark:hover:text-emerald-light transition-colors">Projects</a>
-                        <a href="#skills" class="nav-underline text-warmgray-600 dark:text-warmgray-300 hover:text-emerald dark:hover:text-emerald-light transition-colors">Skills</a>
-                        <a href="#education" class="nav-underline text-warmgray-600 dark:text-warmgray-300 hover:text-emerald dark:hover:text-emerald-light transition-colors">Education</a>
-                        <a href="#contact" class="nav-underline text-warmgray-600 dark:text-warmgray-300 hover:text-emerald dark:hover:text-emerald-light transition-colors">Contact</a>
+                        <a href="#about" class="hover:text-primary transition-colors">About</a>
+                        <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                        <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                        <a href="#education" class="hover:text-primary transition-colors">Education</a>
+                        <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <button onclick="toggleDarkMode()" class="p-2 rounded-lg hover:bg-warmgray-100 dark:hover:bg-warmgray-800 transition-colors">
-                        <i class="fas fa-moon dark:hidden text-emerald"></i>
-                        <i class="fas fa-sun hidden dark:block text-gold"></i>
+                    <button onclick="toggleDarkMode()" class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
                     </button>
-                    <a href="mailto:mofokengodey@gmail.com" class="bg-emerald hover:bg-emerald-deep text-cream px-4 py-2 rounded-full transition-all transform hover:scale-105 text-sm font-medium shadow-warm">
+                    <a href="mailto:mofokengodey@gmail.com" class="bg-primary text-white px-4 py-2 rounded-full hover:bg-blue-800 transition-colors text-sm font-medium">
                         Hire Me
                     </a>
                 </div>
@@ -303,189 +85,96 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="about" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 bg-gradient-to-br from-cream via-cream-light to-cream-dark dark:from-charcoal dark:via-charcoal-light dark:to-charcoal"></div>
-        
-        <!-- Floating Mathematical Formulas -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none" id="floating-formulas"></div>
-        
-        <!-- Geometric Shapes -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <!-- Large rotating ring -->
-            <div class="absolute w-[500px] h-[500px] rounded-full border border-emerald/10 dark:border-emerald-light/10 rotate-ring" style="top: -10%; right: -10%;"></div>
-            <!-- Medium rotating ring -->
-            <div class="absolute w-[300px] h-[300px] rounded-full border border-gold/10 rotate-ring-reverse" style="bottom: 10%; left: -5%;"></div>
-            <!-- Animated hexagon -->
-            <div class="absolute w-48 h-48 animate-float" style="top: 30%; right: 15%;">
-                <svg viewBox="0 0 100 100" class="w-full h-full opacity-20 dark:opacity-10">
-                    <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#d97706" stroke-width="1"/>
-                </svg>
+    <section id="about" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-sm font-medium">
+                    <span class="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
+                    Available for Opportunities
+                </div>
+                <h1 class="text-5xl md:text-7xl font-serif font-bold leading-tight">
+                    Odey <span class="gradient-text">Mofokeng</span>
+                </h1>
+                <p class="text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Actuarial Science & Mathematical Statistics Graduate
+                </p>
+                <p class="text-slate-600 dark:text-slate-400 max-w-lg">
+                    Transforming complex spatial and statistical data into actionable insights. 
+                    Expert in R, SQL, and predictive modelling with award-winning research experience.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#projects" class="bg-primary text-white px-8 py-3 rounded-full hover:bg-blue-800 transition-all transform hover:scale-105 font-medium">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="border-2 border-primary text-primary dark:text-white px-8 py-3 rounded-full hover:bg-primary hover:text-white transition-all font-medium">
+                        Get in Touch
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6 pt-6 text-slate-600 dark:text-slate-400">
+                    <a href="https://www.linkedin.com/in/odey-mofokeng-94b043238/" target="_blank" class="hover:text-primary text-2xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/odeymofokeng-wits" target="_blank" class="hover:text-primary text-2xl"><i class="fab fa-github"></i></a>
+                    <a href="mailto:mofokengodey@gmail.com" class="hover:text-primary text-2xl"><i class="fas fa-envelope"></i></a>
+                    <span class="text-sm">📍 Lenasia South, Gauteng</span>
+                </div>
             </div>
-            <!-- Animated triangle -->
-            <div class="absolute w-40 h-40 animate-float-reverse" style="top: 60%; left: 10%;">
-                <svg viewBox="0 0 100 100" class="w-full h-full opacity-15 dark:opacity-10">
-                    <polygon points="50,10 90,90 10,90" fill="none" stroke="#9f1239" stroke-width="1"/>
-                </svg>
-            </div>
-            <!-- Floating diamonds -->
-            <div class="absolute w-6 h-6 border border-gold/20 rotate-45 animate-float" style="top: 15%; left: 20%;"></div>
-            <div class="absolute w-6 h-6 border border-emerald/20 rotate-45 animate-float-reverse" style="top: 40%; left: 5%;"></div>
-            <div class="absolute w-6 h-6 border border-burgundy/20 rotate-45 animate-float" style="top: 70%; right: 20%;"></div>
-        </div>
-
-        <!-- Animated Gradient Orbs -->
-        <div class="absolute w-[600px] h-[600px] rounded-full opacity-20 dark:opacity-10 animate-pulse-glow" style="background: radial-gradient(circle, rgba(4, 120, 87, 0.3) 0%, transparent 70%); top: 10%; right: -10%;"></div>
-        <div class="absolute w-[500px] h-[500px] rounded-full opacity-20 dark:opacity-10 animate-pulse-glow" style="background: radial-gradient(circle, rgba(217, 119, 6, 0.3) 0%, transparent 70%); bottom: 10%; left: -10%; animation-delay: 2s;"></div>
-
-        <!-- Floating Particles -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none" id="particles"></div>
-
-        <!-- Main Content -->
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald/10 dark:bg-emerald-light/10 border border-emerald/20 dark:border-emerald-light/20 mb-6 animate-float">
-                <i class="fas fa-sparkles text-gold text-sm"></i>
-                <span class="text-sm font-medium text-warmgray-600 dark:text-warmgray-300">Actuarial Science & Statistics</span>
-            </div>
-            
-            <p class="text-lg md:text-xl text-warmgray-500 dark:text-warmgray-400 mb-4 font-medium">
-                Hello, I'm
-            </p>
-            
-            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6">
-                <span class="gradient-text" id="typewriter-text">Odey Mofokeng</span><span id="cursor" class="inline-block w-[3px] h-[1em] ml-1 bg-emerald dark:bg-emerald-light align-middle"></span>
-            </h1>
-            
-            <p class="text-xl md:text-2xl text-warmgray-600 dark:text-warmgray-300 mb-6 max-w-2xl mx-auto">
-                Actuarial Science & Mathematical Statistics Graduate
-            </p>
-            
-            <p class="text-warmgray-500 dark:text-warmgray-400 mb-12 max-w-xl mx-auto leading-relaxed">
-                Passionate about data analysis, statistical modeling, and transforming complex data into actionable insights that drive meaningful decisions.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#projects" class="magnetic-btn px-8 py-4 bg-emerald hover:bg-emerald-deep text-cream rounded-xl font-medium transition-all duration-300 shadow-warm hover:shadow-warm-lg relative overflow-hidden group">
-                    <span class="relative z-10 flex items-center justify-center gap-2">
-                        View My Work
-                        <i class="fas fa-arrow-right"></i>
-                    </span>
-                </a>
-                <a href="#contact" class="magnetic-btn px-8 py-4 border-2 border-emerald text-emerald hover:bg-emerald hover:text-cream dark:border-emerald-light dark:text-emerald-light dark:hover:bg-emerald-light dark:hover:text-charcoal rounded-xl font-medium transition-all duration-300">
-                    Get In Touch
-                </a>
-            </div>
-        </div>
-
-        <!-- Floating Achievement Cards (Desktop only) -->
-        <div class="hidden lg:block">
-            <div class="absolute p-4 rounded-xl glass shadow-warm card-hover" style="top: 25%; left: 8%;">
-                <div class="flex items-center gap-3">
-                    <div class="p-2 rounded-lg bg-gold/10 dark:bg-gold/20">
-                        <i class="fas fa-trophy text-gold"></i>
-                    </div>
-                    <div>
-                        <p class="text-xs text-warmgray-500 dark:text-warmgray-400">Awards Won</p>
-                        <p class="font-serif font-bold text-warmgray-800 dark:text-warmgray-100">4+</p>
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl transform rotate-6 opacity-20"></div>
+                <div class="relative bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-2xl">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 dark:bg-slate-700 p-4 rounded-2xl text-center">
+                            <div class="text-3xl font-bold text-primary">7</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-300">Actuarial Exams</div>
+                        </div>
+                        <div class="bg-amber-50 dark:bg-slate-700 p-4 rounded-2xl text-center">
+                            <div class="text-3xl font-bold text-secondary">1st</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-300">SASA Prize</div>
+                        </div>
+                        <div class="bg-purple-50 dark:bg-slate-700 p-4 rounded-2xl text-center">
+                            <div class="text-3xl font-bold text-purple-600">MSc</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-300">In Progress</div>
+                        </div>
+                        <div class="bg-green-50 dark:bg-slate-700 p-4 rounded-2xl text-center">
+                            <div class="text-3xl font-bold text-green-600">Dist</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-300">Honours</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="absolute p-4 rounded-xl glass shadow-warm card-hover" style="top: 60%; right: 8%;">
-                <div class="flex items-center gap-3">
-                    <div class="p-2 rounded-lg bg-burgundy/10 dark:bg-burgundy-light/20">
-                        <i class="fas fa-graduation-cap text-burgundy dark:text-burgundy-light"></i>
-                    </div>
-                    <div>
-                        <p class="text-xs text-warmgray-500 dark:text-warmgray-400">Education</p>
-                        <p class="font-serif font-bold text-warmgray-800 dark:text-warmgray-100">BSc Hons</p>
-                    </div>
-                </div>
-            </div>
-            <div class="absolute p-4 rounded-xl glass shadow-warm card-hover" style="bottom: 20%; left: 12%;">
-                <div class="flex items-center gap-3">
-                    <div class="p-2 rounded-lg bg-emerald/10 dark:bg-emerald-light/20">
-                        <i class="fas fa-database text-emerald dark:text-emerald-light"></i>
-                    </div>
-                    <div>
-                        <p class="text-xs text-warmgray-500 dark:text-warmgray-400">Projects</p>
-                        <p class="font-serif font-bold text-warmgray-800 dark:text-warmgray-100">5+</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div class="flex flex-col items-center gap-2">
-                <span class="text-xs text-warmgray-400 dark:text-warmgray-500">Scroll</span>
-                <i class="fas fa-chevron-down text-emerald dark:text-emerald-light opacity-60"></i>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quote Section -->
-    <section id="quote" class="py-24 px-4 bg-cream dark:bg-charcoal relative overflow-hidden">
-        <!-- Mathematical pattern background -->
-        <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='35' font-family='serif' font-size='20' fill='%23047857'%3E%E2%88%AB%3C/text%3E%3Ctext x='35' y='50' font-family='serif' font-size='16' fill='%23d97706'%3E%CE%A3%3C/text%3E%3C/svg%3E&quot;); background-size: 60px 60px;"></div>
-        
-        <!-- Gradient overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-emerald/5 via-gold/5 to-burgundy/5"></div>
-        
-        <!-- Decorative quotation marks -->
-        <div class="absolute left-10 top-1/2 -translate-y-1/2 text-6xl text-emerald/10 dark:text-emerald-light/10 font-serif">"</div>
-        <div class="absolute right-10 top-1/2 -translate-y-1/2 text-6xl text-burgundy/10 dark:text-burgundy-light/10 font-serif">"</div>
-        
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <div class="w-20 h-1 bg-gradient-to-r from-emerald via-gold to-burgundy mx-auto mb-10 rounded-full"></div>
-            
-            <blockquote class="text-xl md:text-2xl lg:text-3xl font-serif italic text-warmgray-600 dark:text-warmgray-300 leading-relaxed mb-8">
-                "If I have seen further, it is by standing on the shoulders of giants."
-            </blockquote>
-            
-            <cite class="inline-flex items-center gap-3 text-warmgray-500 dark:text-warmgray-400 not-italic">
-                <div class="w-10 h-[1px] bg-gradient-to-r from-emerald to-gold"></div>
-                <span class="font-medium">Sir Isaac Newton</span>
-            </cite>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-24 bg-cream-light dark:bg-charcoal-light relative">
-        <div class="absolute inset-0 overflow-hidden pointer-events-none" id="particles-projects"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="projects" class="py-20 bg-white dark:bg-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <span class="inline-block px-4 py-1 rounded-full bg-emerald/10 dark:bg-emerald-light/10 text-emerald dark:text-emerald-light text-sm font-medium mb-4">
-                    Portfolio
-                </span>
-                <h2 class="text-4xl font-serif font-bold gradient-text mb-4">Featured Projects</h2>
-                <p class="text-warmgray-500 dark:text-warmgray-400 max-w-2xl mx-auto">
-                    A showcase of my academic and research work in statistics, data analysis, and actuarial science.
+                <h2 class="text-4xl font-serif font-bold mb-4">Featured Projects</h2>
+                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    A collection of my research and analytical work. Click on any project to view 
+                    documentation, code snippets, and uploaded files.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
                 <!-- Project 1: Regression Kriging -->
-                <div class="project-card tilt-card gradient-border rounded-2xl overflow-hidden card-hover cursor-pointer bg-card dark:bg-charcoal" onclick="openProjectModal('kriging')">
-                    <div class="h-48 bg-gradient-to-br from-emerald to-emerald-light flex items-center justify-center text-white text-6xl relative overflow-hidden">
-                        <i class="fas fa-map-marked-alt relative z-10"></i>
-                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+                <div class="project-card bg-slate-50 dark:bg-slate-700 rounded-2xl overflow-hidden card-hover cursor-pointer" onclick="openProjectModal('kriging')">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-map-marked-alt"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <span class="px-3 py-1 bg-emerald/10 dark:bg-emerald-light/20 text-emerald dark:text-emerald-light text-xs rounded-full">Spatial Statistics</span>
-                            <span class="text-gold"><i class="fas fa-trophy"></i> 1st Prize</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Spatial Statistics</span>
+                            <span class="text-amber-500"><i class="fas fa-trophy"></i> 1st Prize</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-warmgray-800 dark:text-warmgray-100">Regression Kriging for Wastewater Surveillance</h3>
-                        <p class="text-warmgray-600 dark:text-warmgray-300 text-sm mb-4">
+                        <h3 class="text-xl font-bold mb-2">Regression Kriging for Wastewater Surveillance</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
                             Honours research project analysing spatial wastewater data using geostatistical modelling in R.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">R</span>
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">Geostatistics</span>
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">Kriging</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">R</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Geostatistics</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Kriging</span>
                         </div>
-                        <div class="flex items-center text-emerald dark:text-emerald-light text-sm font-medium">
+                        <div class="flex items-center text-primary text-sm font-medium">
                             <span>View Documentation</span>
                             <i class="fas fa-arrow-right ml-2"></i>
                         </div>
@@ -493,26 +182,25 @@
                 </div>
 
                 <!-- Project 2: ASA DataFest -->
-                <div class="project-card tilt-card gradient-border rounded-2xl overflow-hidden card-hover cursor-pointer bg-card dark:bg-charcoal" onclick="openProjectModal('datafest')">
-                    <div class="h-48 bg-gradient-to-br from-gold-deep to-gold flex items-center justify-center text-white text-6xl relative overflow-hidden">
-                        <i class="fas fa-chart-line relative z-10"></i>
-                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+                <div class="project-card bg-slate-50 dark:bg-slate-700 rounded-2xl overflow-hidden card-hover cursor-pointer" onclick="openProjectModal('datafest')">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <span class="px-3 py-1 bg-gold/10 dark:bg-gold/20 text-gold-deep dark:text-gold text-xs rounded-full">Data Competition</span>
-                            <span class="text-warmgray-500 text-xs">2025</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded-full">Data Competition</span>
+                            <span class="text-slate-500 text-xs">2025</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-warmgray-800 dark:text-warmgray-100">ASA DataFest 2025</h3>
-                        <p class="text-warmgray-600 dark:text-warmgray-300 text-sm mb-4">
+                        <h3 class="text-xl font-bold mb-2">ASA DataFest 2025</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
                             Team-based analysis of large real-world datasets under time constraints with industry presentation.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">EDA</span>
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">Teamwork</span>
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">Visualization</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">EDA</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Teamwork</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Visualization</span>
                         </div>
-                        <div class="flex items-center text-emerald dark:text-emerald-light text-sm font-medium">
+                        <div class="flex items-center text-primary text-sm font-medium">
                             <span>View Documentation</span>
                             <i class="fas fa-arrow-right ml-2"></i>
                         </div>
@@ -520,26 +208,25 @@
                 </div>
 
                 <!-- Project 3: Reliability Analysis -->
-                <div class="project-card tilt-card gradient-border rounded-2xl overflow-hidden card-hover cursor-pointer bg-card dark:bg-charcoal" onclick="openProjectModal('reliability')">
-                    <div class="h-48 bg-gradient-to-br from-burgundy-deep to-burgundy flex items-center justify-center text-white text-6xl relative overflow-hidden">
-                        <i class="fas fa-clock relative z-10"></i>
-                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+                <div class="project-card bg-slate-50 dark:bg-slate-700 rounded-2xl overflow-hidden card-hover cursor-pointer" onclick="openProjectModal('reliability')">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-clock"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <span class="px-3 py-1 bg-burgundy/10 dark:bg-burgundy-light/20 text-burgundy dark:text-burgundy-light text-xs rounded-full">Survival Analysis</span>
-                            <span class="text-warmgray-500 text-xs">Coursework</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full">Survival Analysis</span>
+                            <span class="text-slate-500 text-xs">Coursework</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-warmgray-800 dark:text-warmgray-100">Statistical Elements of Reliability Analysis</h3>
-                        <p class="text-warmgray-600 dark:text-warmgray-300 text-sm mb-4">
+                        <h3 class="text-xl font-bold mb-2">Statistical Elements of Reliability Analysis</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
                             Lifetime data modelling and failure time analysis mini-project.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">Survival</span>
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">R</span>
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">Modelling</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Survival</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">R</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Modelling</span>
                         </div>
-                        <div class="flex items-center text-emerald dark:text-emerald-light text-sm font-medium">
+                        <div class="flex items-center text-primary text-sm font-medium">
                             <span>View Documentation</span>
                             <i class="fas fa-arrow-right ml-2"></i>
                         </div>
@@ -547,26 +234,25 @@
                 </div>
 
                 <!-- Project 4: Applied Sampling -->
-                <div class="project-card tilt-card gradient-border rounded-2xl overflow-hidden card-hover cursor-pointer bg-card dark:bg-charcoal" onclick="openProjectModal('sampling')">
-                    <div class="h-48 bg-gradient-to-br from-gold to-gold-light flex items-center justify-center text-white text-6xl relative overflow-hidden">
-                        <i class="fas fa-random relative z-10"></i>
-                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+                <div class="project-card bg-slate-50 dark:bg-slate-700 rounded-2xl overflow-hidden card-hover cursor-pointer" onclick="openProjectModal('sampling')">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-random"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <span class="px-3 py-1 bg-gold/10 dark:bg-gold/20 text-gold-deep dark:text-gold text-xs rounded-full">Survey Design</span>
-                            <span class="text-gold text-xs">Top Performance</span>
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 text-xs rounded-full">Survey Design</span>
+                            <span class="text-amber-500 text-xs">Top Performance</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-warmgray-800 dark:text-warmgray-100">Applied Sampling Project</h3>
-                        <p class="text-warmgray-600 dark:text-warmgray-300 text-sm mb-4">
+                        <h3 class="text-xl font-bold mb-2">Applied Sampling Project</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
                             Survey design, estimation techniques, and variance analysis.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">Sampling</span>
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">Variance</span>
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">Estimation</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Sampling</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Variance</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Estimation</span>
                         </div>
-                        <div class="flex items-center text-emerald dark:text-emerald-light text-sm font-medium">
+                        <div class="flex items-center text-primary text-sm font-medium">
                             <span>View Documentation</span>
                             <i class="fas fa-arrow-right ml-2"></i>
                         </div>
@@ -574,26 +260,25 @@
                 </div>
 
                 <!-- Project 5: Biostatistics -->
-                <div class="project-card tilt-card gradient-border rounded-2xl overflow-hidden card-hover cursor-pointer bg-card dark:bg-charcoal" onclick="openProjectModal('biostats')">
-                    <div class="h-48 bg-gradient-to-br from-emerald-light to-emerald flex items-center justify-center text-white text-6xl relative overflow-hidden">
-                        <i class="fas fa-dna relative z-10"></i>
-                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+                <div class="project-card bg-slate-50 dark:bg-slate-700 rounded-2xl overflow-hidden card-hover cursor-pointer" onclick="openProjectModal('biostats')">
+                    <div class="h-48 bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-dna"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <span class="px-3 py-1 bg-emerald/10 dark:bg-emerald-light/20 text-emerald dark:text-emerald-light text-xs rounded-full">Health Data</span>
-                            <span class="text-warmgray-500 text-xs">Coursework</span>
+                            <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-xs rounded-full">Health Data</span>
+                            <span class="text-slate-500 text-xs">Coursework</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-warmgray-800 dark:text-warmgray-100">Biostatistics Application</h3>
-                        <p class="text-warmgray-600 dark:text-warmgray-300 text-sm mb-4">
+                        <h3 class="text-xl font-bold mb-2">Biostatistics Application</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
                             Statistical methods applied to biological and health-related data.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">Biostats</span>
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">Health</span>
-                            <span class="text-xs bg-warmgray-100 dark:bg-warmgray-700 px-2 py-1 rounded">R</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Biostats</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">Health</span>
+                            <span class="text-xs bg-slate-200 dark:bg-slate-600 px-2 py-1 rounded">R</span>
                         </div>
-                        <div class="flex items-center text-emerald dark:text-emerald-light text-sm font-medium">
+                        <div class="flex items-center text-primary text-sm font-medium">
                             <span>View Documentation</span>
                             <i class="fas fa-arrow-right ml-2"></i>
                         </div>
@@ -610,32 +295,32 @@
             
             <span class="inline-block h-screen align-middle" aria-hidden="true">&#8203;</span>
             
-            <div class="inline-block w-full max-w-5xl p-6 my-8 text-left align-middle transition-all transform bg-cream dark:bg-charcoal shadow-xl rounded-2xl relative gradient-border">
-                <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-warmgray-400 hover:text-warmgray-600 dark:hover:text-warmgray-200 text-2xl">
+            <div class="inline-block w-full max-w-5xl p-6 my-8 text-left align-middle transition-all transform bg-white dark:bg-slate-800 shadow-xl rounded-2xl relative">
+                <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-2xl">
                     <i class="fas fa-times"></i>
                 </button>
 
-                <div id="modalContent">
+                                <div id="modalContent">
                     <!-- Content injected via JavaScript -->
                 </div>
                 
-                <!-- Project Files Display -->
-                <div class="mt-8 pt-8 border-t border-warmgray-200 dark:border-warmgray-700">
-                    <h4 class="text-lg font-bold mb-4 flex items-center text-warmgray-800 dark:text-warmgray-100">
-                        <i class="fas fa-folder-open mr-2 text-emerald dark:text-emerald-light"></i>
+                <!-- Project Files Display - ADD THIS SECTION -->
+                <div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
+                    <h4 class="text-lg font-bold mb-4 flex items-center">
+                        <i class="fas fa-folder-open mr-2 text-primary"></i>
                         Project Documentation & Files
                     </h4>
                     
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- PDF Display -->
                         <div id="pdfPreview" class="hidden space-y-2">
-                            <label class="block text-sm font-medium text-warmgray-700 dark:text-warmgray-300">Research Paper / PDF</label>
-                            <iframe class="pdf-container rounded-lg bg-warmgray-100 dark:bg-warmgray-800" id="pdfFrame"></iframe>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Research Paper / PDF</label>
+                            <iframe class="pdf-container rounded-lg" id="pdfFrame"></iframe>
                         </div>
 
                         <!-- Images Display -->
                         <div id="imagePreview" class="hidden space-y-2">
-                            <label class="block text-sm font-medium text-warmgray-700 dark:text-warmgray-300">Images & Visualizations</label>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Images & Visualizations</label>
                             <div id="imagesGrid" class="grid grid-cols-2 gap-2">
                                 <!-- Images injected here -->
                             </div>
@@ -647,195 +332,117 @@
     </div> 
 
     <!-- Skills Section -->
-    <section id="skills" class="py-24 bg-cream dark:bg-charcoal relative overflow-hidden">
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute w-[500px] h-[500px] rounded-full border border-emerald/10 rotate-ring" style="top: -10%; right: -10%;"></div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-1 rounded-full bg-gold/10 dark:bg-gold/20 text-gold text-sm font-medium mb-4">
-                    Expertise
-                </span>
-                <h2 class="text-4xl font-serif font-bold gradient-text mb-4">Technical Expertise</h2>
-                <p class="text-warmgray-500 dark:text-warmgray-400 max-w-2xl mx-auto">
-                    A comprehensive overview of my technical abilities, statistical knowledge, and professional skills.
-                </p>
-            </div>
+    <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-serif font-bold text-center mb-12">Technical Expertise</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Programming -->
-                <div class="gradient-border p-6 rounded-2xl bg-card dark:bg-charcoal-light card-hover relative overflow-hidden group">
-                    <div class="absolute -top-10 -right-10 w-20 h-20 rounded-full bg-emerald/10 animate-pulse-glow"></div>
-                    <h3 class="text-xl font-bold mb-4 flex items-center text-warmgray-800 dark:text-warmgray-100">
-                        <i class="fas fa-code mr-2 text-emerald dark:text-emerald-light"></i> Programming
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-code mr-2 text-primary"></i> Programming
                     </h3>
-                    <div class="space-y-4">
-                        <div class="skill-item" data-level="95">
-                            <div class="flex justify-between mb-1"><span class="text-warmgray-700 dark:text-warmgray-300">R (tidyverse, ggplot2, caret)</span><span class="text-emerald font-semibold">95%</span></div>
-                            <div class="w-full bg-warmgray-200 dark:bg-warmgray-700 rounded-full h-2.5 overflow-hidden">
-                                <div class="h-full rounded-full skill-bar" style="width: 95%; background: linear-gradient(90deg, #047857, #d97706);"></div>
-                            </div>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>R (tidyverse, ggplot2, caret)</span><span>95%</span></div>
+                            <div class="w-full bg-slate-200 rounded-full h-2"><div class="bg-primary h-2 rounded-full" style="width: 95%"></div></div>
                         </div>
-                        <div class="skill-item" data-level="85">
-                            <div class="flex justify-between mb-1"><span class="text-warmgray-700 dark:text-warmgray-300">SQL</span><span class="text-emerald font-semibold">85%</span></div>
-                            <div class="w-full bg-warmgray-200 dark:bg-warmgray-700 rounded-full h-2.5 overflow-hidden">
-                                <div class="h-full rounded-full skill-bar" style="width: 85%; background: linear-gradient(90deg, #047857, #d97706);"></div>
-                            </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>SQL</span><span>85%</span></div>
+                            <div class="w-full bg-slate-200 rounded-full h-2"><div class="bg-primary h-2 rounded-full" style="width: 85%"></div></div>
                         </div>
-                        <div class="skill-item" data-level="90">
-                            <div class="flex justify-between mb-1"><span class="text-warmgray-700 dark:text-warmgray-300">Excel (Advanced)</span><span class="text-emerald font-semibold">90%</span></div>
-                            <div class="w-full bg-warmgray-200 dark:bg-warmgray-700 rounded-full h-2.5 overflow-hidden">
-                                <div class="h-full rounded-full skill-bar" style="width: 90%; background: linear-gradient(90deg, #047857, #d97706);"></div>
-                            </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Excel (Advanced)</span><span>90%</span></div>
+                            <div class="w-full bg-slate-200 rounded-full h-2"><div class="bg-primary h-2 rounded-full" style="width: 90%"></div></div>
                         </div>
-                        <div class="skill-item" data-level="80">
-                            <div class="flex justify-between mb-1"><span class="text-warmgray-700 dark:text-warmgray-300">Power BI</span><span class="text-emerald font-semibold">80%</span></div>
-                            <div class="w-full bg-warmgray-200 dark:bg-warmgray-700 rounded-full h-2.5 overflow-hidden">
-                                <div class="h-full rounded-full skill-bar" style="width: 80%; background: linear-gradient(90deg, #047857, #d97706);"></div>
-                            </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Power BI</span><span>80%</span></div>
+                            <div class="w-full bg-slate-200 rounded-full h-2"><div class="bg-primary h-2 rounded-full" style="width: 80%"></div></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Statistical Methods -->
-                <div class="gradient-border p-6 rounded-2xl bg-card dark:bg-charcoal-light card-hover relative overflow-hidden">
-                    <div class="absolute -top-10 -right-10 w-20 h-20 rounded-full bg-gold/10 animate-pulse-glow"></div>
-                    <h3 class="text-xl font-bold mb-4 flex items-center text-warmgray-800 dark:text-warmgray-100">
-                        <i class="fas fa-brain mr-2 text-gold"></i> Statistical Methods
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-brain mr-2 text-secondary"></i> Statistical Methods
                     </h3>
-                    <ul class="space-y-3 text-warmgray-600 dark:text-warmgray-300">
-                        <li class="flex items-center"><i class="fas fa-check text-emerald mr-2"></i>Regression Analysis</li>
-                        <li class="flex items-center"><i class="fas fa-check text-emerald mr-2"></i>Spatial Statistics & Geostatistics</li>
-                        <li class="flex items-center"><i class="fas fa-check text-emerald mr-2"></i>Predictive Modelling</li>
-                        <li class="flex items-center"><i class="fas fa-check text-emerald mr-2"></i>Time Series Analysis</li>
-                        <li class="flex items-center"><i class="fas fa-check text-emerald mr-2"></i>Survival Analysis</li>
-                        <li class="flex items-center"><i class="fas fa-check text-emerald mr-2"></i>Machine Learning</li>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Regression Analysis</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Spatial Statistics & Geostatistics</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Predictive Modelling</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Time Series Analysis</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Survival Analysis</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Machine Learning</li>
                     </ul>
                 </div>
 
-                <!-- Actuarial -->
-                <div class="gradient-border p-6 rounded-2xl bg-card dark:bg-charcoal-light card-hover relative overflow-hidden">
-                    <div class="absolute -top-10 -right-10 w-20 h-20 rounded-full bg-burgundy/10 animate-pulse-glow"></div>
-                    <h3 class="text-xl font-bold mb-4 flex items-center text-warmgray-800 dark:text-warmgray-100">
-                        <i class="fas fa-briefcase mr-2 text-burgundy dark:text-burgundy-light"></i> Actuarial
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-briefcase mr-2 text-purple-500"></i> Actuarial
                     </h3>
                     <div class="grid grid-cols-2 gap-2 text-sm">
-                        <div class="bg-warmgray-100 dark:bg-warmgray-700 p-2 rounded text-center">A111</div>
-                        <div class="bg-warmgray-100 dark:bg-warmgray-700 p-2 rounded text-center">A112</div>
-                        <div class="bg-warmgray-100 dark:bg-warmgray-700 p-2 rounded text-center">A211</div>
-                        <div class="bg-warmgray-100 dark:bg-warmgray-700 p-2 rounded text-center">A212</div>
-                        <div class="bg-warmgray-100 dark:bg-warmgray-700 p-2 rounded text-center">A213</div>
-                        <div class="bg-warmgray-100 dark:bg-warmgray-700 p-2 rounded text-center">A113</div>
-                        <div class="bg-warmgray-100 dark:bg-warmgray-700 p-2 rounded text-center">N111</div>
-                        <div class="bg-emerald/20 dark:bg-emerald-light/20 text-emerald dark:text-emerald-light p-2 rounded text-center font-bold">7 Passed</div>
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">A111</div>
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">A112</div>
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">A211</div>
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">A212</div>
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">A213</div>
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">A113</div>
+                        <div class="bg-slate-100 dark:bg-slate-700 p-2 rounded text-center">N111</div>
+                        <div class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 p-2 rounded text-center font-bold">7 Passed</div>
                     </div>
-                    <p class="mt-3 text-xs text-warmgray-500 dark:text-warmgray-400">Professional Actuarial Exams (IFOA/ASSA)</p>
-                </div>
-            </div>
-
-            <!-- Stats -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-                <div class="text-center p-6 rounded-xl glass border border-warmgray-200 dark:border-warmgray-700 card-hover">
-                    <div class="w-12 h-12 rounded-full bg-emerald/10 dark:bg-emerald-light/10 flex items-center justify-center mx-auto mb-3">
-                        <i class="fas fa-database text-emerald dark:text-emerald-light text-xl"></i>
-                    </div>
-                    <div class="text-3xl font-serif font-bold gradient-text counter" data-target="5">0</div>
-                    <p class="text-warmgray-500 dark:text-warmgray-400 mt-2 text-sm">Research Projects</p>
-                </div>
-                <div class="text-center p-6 rounded-xl glass border border-warmgray-200 dark:border-warmgray-700 card-hover">
-                    <div class="w-12 h-12 rounded-full bg-gold/10 dark:bg-gold/20 flex items-center justify-center mx-auto mb-3">
-                        <i class="fas fa-graduation-cap text-gold text-xl"></i>
-                    </div>
-                    <div class="text-3xl font-serif font-bold gradient-text counter" data-target="3">0</div>
-                    <p class="text-warmgray-500 dark:text-warmgray-400 mt-2 text-sm">Years of Study</p>
-                </div>
-                <div class="text-center p-6 rounded-xl glass border border-warmgray-200 dark:border-warmgray-700 card-hover">
-                    <div class="w-12 h-12 rounded-full bg-burgundy/10 dark:bg-burgundy-light/20 flex items-center justify-center mx-auto mb-3">
-                        <i class="fas fa-book text-burgundy dark:text-burgundy-light text-xl"></i>
-                    </div>
-                    <div class="text-3xl font-serif font-bold gradient-text counter" data-target="10">0</div>
-                    <p class="text-warmgray-500 dark:text-warmgray-400 mt-2 text-sm">Courses Completed</p>
-                </div>
-                <div class="text-center p-6 rounded-xl glass border border-warmgray-200 dark:border-warmgray-700 card-hover">
-                    <div class="w-12 h-12 rounded-full bg-emerald/10 dark:bg-emerald-light/10 flex items-center justify-center mx-auto mb-3">
-                        <i class="fas fa-trophy text-emerald dark:text-emerald-light text-xl"></i>
-                    </div>
-                    <div class="text-3xl font-serif font-bold gradient-text counter" data-target="4">0</div>
-                    <p class="text-warmgray-500 dark:text-warmgray-400 mt-2 text-sm">Awards Won</p>
+                    <p class="mt-3 text-xs text-slate-500">Professional Actuarial Exams (IFOA/ASSA)</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Education Timeline -->
-    <section id="education" class="py-24 bg-cream-light dark:bg-charcoal-light">
+    <section id="education" class="py-20 bg-white dark:bg-slate-800">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-1 rounded-full bg-burgundy/10 dark:bg-burgundy-light/10 text-burgundy dark:text-burgundy-light text-sm font-medium mb-4">
-                    Academic Journey
-                </span>
-                <h2 class="text-4xl font-serif font-bold gradient-text mb-4">Education</h2>
-                <p class="text-warmgray-500 dark:text-warmgray-400 max-w-2xl mx-auto">
-                    My academic journey in actuarial science and mathematical statistics.
-                </p>
-            </div>
+            <h2 class="text-4xl font-serif font-bold text-center mb-12">Education</h2>
             
-            <div class="relative">
-                <!-- Timeline line with gradient -->
-                <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 rounded-full overflow-hidden" style="background: linear-gradient(to bottom, #047857, #d97706, #9f1239);"></div>
-                
-                <!-- MSc -->
-                <div class="flex gap-4 mb-12 relative">
-                    <div class="flex-shrink-0 w-12 h-12 bg-emerald rounded-full flex items-center justify-center text-white z-10 shadow-warm">
+            <div class="space-y-8">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <div class="flex-grow pb-8 pl-8 md:pl-8 relative">
-                        <div class="absolute left-12 md:left-12 top-0 w-4 h-4 bg-emerald rounded-full animate-pulse"></div>
-                        <div class="gradient-border p-6 rounded-xl bg-card dark:bg-charcoal card-hover">
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-                                <h3 class="text-xl font-bold text-warmgray-800 dark:text-warmgray-100">MSc in Mathematical Statistics</h3>
-                                <span class="text-sm bg-emerald/10 dark:bg-emerald-light/10 text-emerald dark:text-emerald-light px-3 py-1 rounded-full">2026</span>
-                            </div>
-                            <p class="text-emerald dark:text-emerald-light font-medium">University of the Witwatersrand</p>
-                            <p class="text-warmgray-600 dark:text-warmgray-400 mt-2">Dissertation in progress. Focus on spatial statistics and actuarial science.</p>
+                    <div class="flex-grow pb-8 border-l-2 border-slate-200 dark:border-slate-600 pl-8 relative">
+                        <div class="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                            <h3 class="text-xl font-bold">MSc in Mathematical Statistics</h3>
+                            <span class="text-sm bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full">2026</span>
                         </div>
+                        <p class="text-primary font-medium">University of the Witwatersrand</p>
+                        <p class="text-slate-600 dark:text-slate-400 mt-2">Dissertation in progress. Focus on spatial statistics and actuarial science.</p>
                     </div>
                 </div>
 
-                <!-- BSc Honours -->
-                <div class="flex gap-4 mb-12 relative">
-                    <div class="flex-shrink-0 w-12 h-12 bg-gold rounded-full flex items-center justify-center text-white z-10 shadow-warm">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white">
                         <i class="fas fa-award"></i>
                     </div>
-                    <div class="flex-grow pb-8 pl-8 md:pl-8 relative">
-                        <div class="absolute left-12 md:left-12 top-0 w-4 h-4 bg-gold rounded-full animate-pulse"></div>
-                        <div class="gradient-border p-6 rounded-xl bg-card dark:bg-charcoal card-hover">
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-                                <h3 class="text-xl font-bold text-warmgray-800 dark:text-warmgray-100">BSc Honours in Mathematical Statistics</h3>
-                                <span class="text-sm bg-gold/10 dark:bg-gold/20 text-gold-deep dark:text-gold px-3 py-1 rounded-full">2025</span>
-                            </div>
-                            <p class="text-emerald dark:text-emerald-light font-medium">University of the Witwatersrand</p>
-                            <p class="text-warmgray-600 dark:text-warmgray-400 mt-2">Graduated with Distinction. Coursework: Spatial Statistics, Statistical ML, Operations Research.</p>
+                    <div class="flex-grow pb-8 border-l-2 border-slate-200 dark:border-slate-600 pl-8 relative">
+                        <div class="absolute -left-2 top-0 w-4 h-4 bg-secondary rounded-full"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                            <h3 class="text-xl font-bold">BSc Honours in Mathematical Statistics</h3>
+                            <span class="text-sm bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 px-3 py-1 rounded-full">2025</span>
                         </div>
+                        <p class="text-primary font-medium">University of the Witwatersrand</p>
+                        <p class="text-slate-600 dark:text-slate-400 mt-2">Graduated with Distinction. Coursework: Spatial Statistics, Statistical ML, Operations Research.</p>
                     </div>
                 </div>
 
-                <!-- BSc -->
-                <div class="flex gap-4 relative">
-                    <div class="flex-shrink-0 w-12 h-12 bg-burgundy rounded-full flex items-center justify-center text-white z-10 shadow-warm">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white">
                         <i class="fas fa-calculator"></i>
                     </div>
-                    <div class="flex-grow pl-8 md:pl-8 relative">
-                        <div class="absolute left-12 md:left-12 top-0 w-4 h-4 bg-burgundy rounded-full animate-pulse"></div>
-                        <div class="gradient-border p-6 rounded-xl bg-card dark:bg-charcoal card-hover">
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-                                <h3 class="text-xl font-bold text-warmgray-800 dark:text-warmgray-100">BSc in Actuarial Science</h3>
-                                <span class="text-sm bg-burgundy/10 dark:bg-burgundy-light/10 text-burgundy dark:text-burgundy-light px-3 py-1 rounded-full">2022-2024</span>
-                            </div>
-                            <p class="text-emerald dark:text-emerald-light font-medium">University of the Witwatersrand</p>
-                            <p class="text-warmgray-600 dark:text-warmgray-400 mt-2">Actuarial Reserving, Survival Analysis, Time Series, Actuarial Economics.</p>
+                    <div class="flex-grow pb-8 border-l-2 border-slate-200 dark:border-slate-600 pl-8 relative">
+                        <div class="absolute -left-2 top-0 w-4 h-4 bg-purple-600 rounded-full"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                            <h3 class="text-xl font-bold">BSc in Actuarial Science</h3>
+                            <span class="text-sm bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full">2022-2024</span>
                         </div>
+                        <p class="text-primary font-medium">University of the Witwatersrand</p>
+                        <p class="text-slate-600 dark:text-slate-400 mt-2">Actuarial Reserving, Survival Analysis, Time Series, Actuarial Economics.</p>
                     </div>
                 </div>
             </div>
@@ -843,100 +450,87 @@
     </section>
 
     <!-- Achievements -->
-    <section class="py-16 bg-cream dark:bg-charcoal relative overflow-hidden">
-        <div class="absolute inset-0 overflow-hidden pointer-events-none" id="particles-achievements"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-serif font-bold gradient-text mb-4">Achievements & Recognition</h2>
-            </div>
-            
+    <section class="py-16 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-6 text-center">
-                <div class="p-6 gradient-border rounded-xl bg-card dark:bg-charcoal-light card-hover">
-                    <i class="fas fa-trophy text-4xl text-gold mb-3"></i>
-                    <h3 class="font-bold text-warmgray-800 dark:text-warmgray-100">First Prize</h3>
-                    <p class="text-sm text-warmgray-600 dark:text-warmgray-400">SASA Conference 2025</p>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow">
+                    <i class="fas fa-trophy text-4xl text-yellow-500 mb-3"></i>
+                    <h3 class="font-bold">First Prize</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">SASA Conference 2025</p>
                 </div>
-                <div class="p-6 gradient-border rounded-xl bg-card dark:bg-charcoal-light card-hover">
-                    <i class="fas fa-medal text-4xl text-emerald dark:text-emerald-light mb-3"></i>
-                    <h3 class="font-bold text-warmgray-800 dark:text-warmgray-100">Top 100 Achiever</h3>
-                    <p class="text-sm text-warmgray-600 dark:text-warmgray-400">Free State Province</p>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow">
+                    <i class="fas fa-medal text-4xl text-blue-500 mb-3"></i>
+                    <h3 class="font-bold">Top 100 Achiever</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Free State Province</p>
                 </div>
-                <div class="p-6 gradient-border rounded-xl bg-card dark:bg-charcoal-light card-hover">
-                    <i class="fas fa-percentage text-4xl text-gold mb-3"></i>
-                    <h3 class="font-bold text-warmgray-800 dark:text-warmgray-100">100%</h3>
-                    <p class="text-sm text-warmgray-600 dark:text-warmgray-400">Physical Sciences NSC</p>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow">
+                    <i class="fas fa-percentage text-4xl text-green-500 mb-3"></i>
+                    <h3 class="font-bold">100%</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Physical Sciences NSC</p>
                 </div>
-                <div class="p-6 gradient-border rounded-xl bg-card dark:bg-charcoal-light card-hover">
-                    <i class="fas fa-user-graduate text-4xl text-burgundy dark:text-burgundy-light mb-3"></i>
-                    <h3 class="font-bold text-warmgray-800 dark:text-warmgray-100">SAADP Alumni</h3>
-                    <p class="text-sm text-warmgray-600 dark:text-warmgray-400">Actuarial Development</p>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow">
+                    <i class="fas fa-user-graduate text-4xl text-purple-500 mb-3"></i>
+                    <h3 class="font-bold">SAADP Alumni</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Actuarial Development</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-24 bg-emerald relative overflow-hidden">
-        <!-- Decorative elements -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute w-[500px] h-[500px] rounded-full border border-white/10 rotate-ring" style="top: -20%; right: -10%;"></div>
-            <div class="absolute w-[300px] h-[300px] rounded-full border border-gold/20 rotate-ring-reverse" style="bottom: -10%; left: -5%;"></div>
-        </div>
-        
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h2 class="text-4xl font-serif font-bold mb-6 text-cream">Let's Work Together</h2>
-            <p class="text-xl mb-8 text-cream/80">Available for data science, actuarial, and statistical consulting opportunities.</p>
+    <section id="contact" class="py-20 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-serif font-bold mb-6">Let's Work Together</h2>
+            <p class="text-xl mb-8 text-blue-100">Available for data science, actuarial, and statistical consulting opportunities.</p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-6 mb-12">
-                <a href="mailto:mofokengodey@gmail.com" class="flex items-center justify-center gap-3 bg-cream text-emerald px-8 py-4 rounded-full font-bold hover:bg-cream-light transition-colors shadow-warm card-hover">
+                <a href="mailto:mofokengodey@gmail.com" class="flex items-center justify-center gap-3 bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition-colors">
                     <i class="fas fa-envelope"></i>
                     mofokengodey@gmail.com
                 </a>
-                <a href="tel:+27639633131" class="flex items-center justify-center gap-3 border-2 border-cream text-cream px-8 py-4 rounded-full font-bold hover:bg-cream hover:text-emerald transition-colors card-hover">
+                <a href="tel:+27639633131" class="flex items-center justify-center gap-3 border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-colors">
                     <i class="fas fa-phone"></i>
                     +27 63 963 3131
                 </a>
             </div>
 
             <div class="flex justify-center space-x-6">
-                <a href="https://www.linkedin.com/in/odey-mofokeng-94b043238/" target="_blank" class="text-2xl text-cream/80 hover:text-gold transition-colors"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/odeymofokeng-wits" target="_blank" class="text-2xl text-cream/80 hover:text-gold transition-colors"><i class="fab fa-github"></i></a>
-                <a href="mailto:mofokengodey@gmail.com" class="text-2xl text-cream/80 hover:text-gold transition-colors"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="text-2xl hover:text-secondary transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-2xl hover:text-secondary transition-colors"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-2xl hover:text-secondary transition-colors"><i class="fas fa-globe"></i></a>
             </div>
         </div>
     </section>
 
-    <footer class="bg-charcoal text-warmgray-400 py-8 text-center text-sm relative">
-        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald/30 to-transparent"></div>
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
         <p>&copy; 2026 Odey Mofokeng. All rights reserved.</p>
     </footer>
 
     <script>
-        // Project Data - KEPT EXACTLY AS PROVIDED
+        // Project Data - EDIT THIS OBJECT TO ADD/PERSIST PROJECT FILES
         const projectsData = {
             kriging: {
-                title: "Regression Kriging for Wastewater Surveillance",
-                description: "Developed regression-kriging models in R to analyse spatial wastewater data and capture spatial dependencies. Performed data preprocessing, feature engineering, and spatial cross-validation.",
-                details: "This research project involved developing advanced spatial statistical models to analyse wastewater surveillance data. The study compared regression-kriging approaches against standard kriging methods using rigorous diagnostic metrics. The work was presented at the South African Statistical Association (SASA) Annual Conference where it earned First Prize for Best Poster.",
-                skills: ["R", "Geostatistics", "Spatial Cross-Validation", "Regression Kriging"],
-                pdfUrl: "assets/kriging/Wastewater_Modelling_Poster_Odey_Mofokeng.pdf",
-                images: [
-                    "assets/kriging/kriging-map.jpeg",
-                    "assets/kriging/kriging-chart.png"
-                ]
-            },
+    title: "Regression Kriging for Wastewater Surveillance",
+    description: "Developed regression-kriging models in R to analyse spatial wastewater data and capture spatial dependencies. Performed data preprocessing, feature engineering, and spatial cross-validation.",
+    details: "This research project involved developing advanced spatial statistical models to analyse wastewater surveillance data. The study compared regression-kriging approaches against standard kriging methods using rigorous diagnostic metrics. The work was presented at the South African Statistical Association (SASA) Annual Conference where it earned First Prize for Best Poster.",
+    skills: ["R", "Geostatistics", "Spatial Cross-Validation", "Regression Kriging"],
+    pdfUrl: "assets/kriging/Wastewater_Modelling_Poster_Odey_Mofokeng.pdf",
+    images: [
+        "assets/kriging/kriging-map.jpeg",
+        "assets/kriging/kriging-chart.png"
+    ]
+},
             datafest: {
-                title: "ASA DataFest 2025",
-                description: "Collaborated in a team to analyse large real-world datasets under time constraints. Employed exploratory data analysis, statistical modelling, and visualisation techniques.",
-                details: "Participated in the American Statistical Association DataFest competition, working collaboratively to extract insights from complex datasets. The project involved rapid prototyping of analytical solutions and presentation of findings to a panel of academic and industry judges.",
-                skills: ["Team Collaboration", "EDA", "Statistical Modelling", "Data Visualization"],
-                pdfUrl: "assets/datafest/SEPTEMBER25_wordpress_ASA Article.pdf",
-                images: [
-                    "assets/datafest/Day 1_11.jpg",
-                    "assets/datafest/Day 3_Group_photo.jpg"
-                ]
-            },
+    title: "ASA DataFest 2025",
+    description: "Collaborated in a team to analyse large real-world datasets under time constraints. Employed exploratory data analysis, statistical modelling, and visualisation techniques.",
+    details: "Participated in the American Statistical Association DataFest competition, working collaboratively to extract insights from complex datasets. The project involved rapid prototyping of analytical solutions and presentation of findings to a panel of academic and industry judges.",
+    skills: ["Team Collaboration", "EDA", "Statistical Modelling", "Data Visualization"],
+    pdfUrl: "assets/datafest/SEPTEMBER25_wordpress_ASA Article.pdf",
+    images: [
+        "assets/datafest/Day 1_11.jpg",
+        "assets/datafest/Day 3_Group_photo.jpg"
+    ]
+},
             reliability: {
                 title: "Statistical Elements of Reliability Analysis",
                 description: "Mini-project focusing on lifetime data modelling and failure time analysis using survival analysis techniques.",
@@ -946,13 +540,13 @@
                 images: []
             },
             sampling: {
-                title: "Applied Sampling Project",
-                description: "Top-performing mini-project involving survey design, estimation techniques, and variance analysis. Stratified sampling analysis of EV adoption with Bayesian estimation.",
-                details: "This mini-project estimates electric vehicle adoption intentions among 10,000 urban residents using stratified sampling. The study achieves a 23.75% variance reduction over simple random sampling with a design-adjusted estimate of 0.4024 (SE = 0.0234, 95% CI: 0.3574–0.4490). Key techniques include cost-constrained allocation, post-stratification adjustment for missing-at-random nonresponse, and Bayesian estimation using binomial logit models. Monte Carlo simulation with 200 replications validates the design's precision and coverage.",
-                skills: ["Survey Design", "Stratified Sampling", "Bayesian Estimation", "R"],
-                pdfUrl: "assets/course_mini_projects/applied_sampling/Applied_Sampling_EV_Adoption_Report.pdf",
-                images: []
-            },
+    title: "Applied Sampling Project",
+    description: "Top-performing mini-project involving survey design, estimation techniques, and variance analysis. Stratified sampling analysis of EV adoption with Bayesian estimation.",
+    details: "This mini-project estimates electric vehicle adoption intentions among 10,000 urban residents using stratified sampling. The study achieves a 23.75% variance reduction over simple random sampling with a design-adjusted estimate of 0.4024 (SE = 0.0234, 95% CI: 0.3574–0.4490). Key techniques include cost-constrained allocation, post-stratification adjustment for missing-at-random nonresponse, and Bayesian estimation using binomial logit models. Monte Carlo simulation with 200 replications validates the design's precision and coverage.",
+    skills: ["Survey Design", "Stratified Sampling", "Bayesian Estimation", "R"],
+    pdfUrl: "assets/course_mini_projects/applied_sampling/Applied_Sampling_EV_Adoption_Report.pdf",
+                 images: []
+},
             biostats: {
                 title: "Biostatistics Application",
                 description: "Applying statistical methods to biological and health-related data. Analysis of treatment-dependent censoring in survival data.",
@@ -962,73 +556,6 @@
                 images: []
             }
         };
-
-        // Mathematical formulas for floating animation
-        const mathFormulas = [
-            "∫ f(x)dx", "Σ(xi - x̄)²", "P(A|B)", "σ² = E[(X-μ)²]", "H₀: μ = μ₀",
-            "β = Σ(X-X̄)(Y-Ȳ) / Σ(X-X̄)²", "e^(iπ) + 1 = 0", "∂f/∂x", "lim(x→∞)", "√n",
-            "P-value < 0.05", "N(μ, σ²)", "f(x) = ax² + bx + c", "y = β₀ + β₁x + ε", "π ≈ 3.14159"
-        ];
-
-        // Initialize floating formulas
-        function initFloatingFormulas() {
-            const container = document.getElementById('floating-formulas');
-            mathFormulas.forEach((formula, i) => {
-                const el = document.createElement('div');
-                el.className = 'math-formula animate-float';
-                el.style.left = `${(i * 7) % 100}%`;
-                el.style.top = `${(i * 11) % 100}%`;
-                el.style.color = i % 3 === 0 ? '#047857' : i % 3 === 1 ? '#d97706' : '#9f1239';
-                el.style.animationDelay = `${i * 0.5}s`;
-                el.textContent = formula;
-                container.appendChild(el);
-            });
-        }
-
-        // Initialize particles
-        function initParticles(containerId) {
-            const container = document.getElementById(containerId);
-            if (!container) return;
-            
-            for (let i = 0; i < 15; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle absolute rounded-full';
-                particle.style.left = `${Math.random() * 100}%`;
-                particle.style.top = `${Math.random() * 100}%`;
-                particle.style.width = `${3 + Math.random() * 6}px`;
-                particle.style.height = particle.style.width;
-                particle.style.background = i % 3 === 0 
-                    ? 'radial-gradient(circle, rgba(4, 120, 87, 0.4) 0%, transparent 70%)'
-                    : i % 3 === 1 
-                        ? 'radial-gradient(circle, rgba(217, 119, 6, 0.4) 0%, transparent 70%)'
-                        : 'radial-gradient(circle, rgba(159, 18, 57, 0.4) 0%, transparent 70%)';
-                particle.style.animationDelay = `${Math.random() * 3}s`;
-                container.appendChild(particle);
-            }
-        }
-
-        // Custom cursor
-        const cursor = document.getElementById('custom-cursor');
-        const cursorRing = document.getElementById('cursor-ring');
-        
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-            cursorRing.style.left = e.clientX + 'px';
-            cursorRing.style.top = e.clientY + 'px';
-        });
-
-        document.addEventListener('mouseover', (e) => {
-            if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.closest('a') || e.target.closest('button')) {
-                cursor.style.background = '#d97706';
-                cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                cursorRing.style.borderColor = 'rgba(217, 119, 6, 0.5)';
-            } else {
-                cursor.style.background = '#047857';
-                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-                cursorRing.style.borderColor = 'rgba(4, 120, 87, 0.5)';
-            }
-        });
 
         // Dark Mode Toggle
         function toggleDarkMode() {
@@ -1048,14 +575,14 @@
             const content = document.getElementById('modalContent');
             
             content.innerHTML = `
-                <h2 class="text-3xl font-bold mb-4 gradient-text">${project.title}</h2>
+                <h2 class="text-3xl font-bold mb-4 text-primary dark:text-blue-400">${project.title}</h2>
                 <div class="flex flex-wrap gap-2 mb-4">
-                    ${project.skills.map(skill => `<span class="px-3 py-1 bg-emerald/10 dark:bg-emerald-light/20 text-emerald dark:text-emerald-light rounded-full text-sm">${skill}</span>`).join('')}
+                    ${project.skills.map(skill => `<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">${skill}</span>`).join('')}
                 </div>
-                <p class="text-warmgray-700 dark:text-warmgray-300 mb-4 leading-relaxed">${project.details}</p>
-                <div class="bg-cream-light dark:bg-charcoal p-4 rounded-lg">
-                    <h4 class="font-bold mb-2 text-warmgray-800 dark:text-warmgray-200">Key Achievements:</h4>
-                    <p class="text-sm text-warmgray-600 dark:text-warmgray-300">${project.description}</p>
+                <p class="text-slate-700 dark:text-slate-300 mb-4 leading-relaxed">${project.details}</p>
+                <div class="bg-slate-50 dark:bg-slate-700 p-4 rounded-lg">
+                    <h4 class="font-bold mb-2">Key Achievements:</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">${project.description}</p>
                 </div>
             `;
 
@@ -1069,7 +596,7 @@
                 const imgContainer = document.getElementById('imagePreview');
                 imgContainer.classList.remove('hidden');
                 document.getElementById('imagesGrid').innerHTML = project.images.map(img => 
-                    `<img src="${img}" class="rounded-lg shadow-md w-full h-32 object-cover hover:scale-105 transition-transform duration-300">`
+                    `<img src="${img}" class="rounded-lg shadow-md w-full h-32 object-cover">`
                 ).join('');
             }
 
@@ -1085,7 +612,6 @@
             document.getElementById('imagePreview').classList.add('hidden');
             document.getElementById('pdfFrame').src = '';
         }
-
         // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1101,96 +627,10 @@
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 50) {
-                nav.classList.add('shadow-warm');
+                nav.classList.add('shadow-md');
             } else {
-                nav.classList.remove('shadow-warm');
+                nav.classList.remove('shadow-md');
             }
-        });
-
-        // Typewriter effect
-        const typewriterText = document.getElementById('typewriter-text');
-        const cursor = document.getElementById('cursor');
-        const fullText = 'Odey Mofokeng';
-        let charIndex = 0;
-
-        function typeWriter() {
-            if (charIndex < fullText.length) {
-                typewriterText.textContent = fullText.substring(0, charIndex + 1);
-                charIndex++;
-                setTimeout(typeWriter, 100);
-            }
-        }
-
-        // Cursor blink
-        setInterval(() => {
-            cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
-        }, 530);
-
-        // Counter animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                const duration = 2000;
-                const start = 0;
-                const startTime = performance.now();
-                
-                function updateCounter(currentTime) {
-                    const elapsed = currentTime - startTime;
-                    const progress = Math.min(elapsed / duration, 1);
-                    const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-                    counter.textContent = Math.floor(easeOutQuart * target) + '+';
-                    
-                    if (progress < 1) {
-                        requestAnimationFrame(updateCounter);
-                    }
-                }
-                
-                requestAnimationFrame(updateCounter);
-            });
-        }
-
-        // Intersection Observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (entry.target.classList.contains('counter')) {
-                        animateCounters();
-                    }
-                    entry.target.classList.add('animate');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.counter, .skill-item').forEach(el => observer.observe(el));
-
-        // 3D Tilt effect for cards
-        document.querySelectorAll('.tilt-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const rotateX = (y - centerY) / 10;
-                const rotateY = (centerX - x) / 10;
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-            });
-        });
-
-        // Initialize on load
-        document.addEventListener('DOMContentLoaded', () => {
-            initFloatingFormulas();
-            initParticles('particles');
-            initParticles('particles-projects');
-            initParticles('particles-achievements');
-            
-            // Start typewriter after a delay
-            setTimeout(typeWriter, 500);
         });
     </script>
 </body>
