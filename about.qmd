@@ -1,0 +1,380 @@
+---
+title: "About Me"
+---
+
+```{=html}
+
+<!-- ====== ABOUT INTRO ====== -->
+<section class="page-section reveal">
+<div class="container">
+
+<div class="row g-5 align-items-start">
+
+<!-- Left: Visual -->
+<div class="col-lg-4 text-center">
+<div style="background: var(--om-gradient-hero); border-radius: var(--om-radius-lg); padding: 2.5rem; position: relative;">
+<div style="background: white; border-radius: var(--om-radius); padding: 2rem;">
+<i class="fas fa-user-graduate" style="font-size: 5rem; color: var(--om-primary);"></i>
+</div>
+</div>
+
+<div class="mt-4">
+<h4 style="font-family: var(--om-font-heading); font-size: 1.1rem; color: #8B7355; margin-bottom: 1rem;">Quick Facts</h4>
+<div style="text-align: left;">
+<div style="padding: .5rem 0; border-bottom: 1px solid rgba(201,149,93,.1);">
+<strong>Location:</strong> Lenasia South, Gauteng
+</div>
+<div style="padding: .5rem 0; border-bottom: 1px solid rgba(201,149,93,.1);">
+<strong>Degree:</strong> MSc Mathematical Statistics
+</div>
+<div style="padding: .5rem 0; border-bottom: 1px solid rgba(201,149,93,.1);">
+<strong>University:</strong> University of the Witwatersrand
+</div>
+<div style="padding: .5rem 0; border-bottom: 1px solid rgba(201,149,93,.1);">
+<strong>Exams Passed:</strong> 7 Actuarial Exams
+</div>
+<div style="padding: .5rem 0; border-bottom: 1px solid rgba(201,149,93,.1);">
+<strong>Award:</strong> 1st Prize SASA Conference 2025
+</div>
+<div style="padding: .5rem 0; border-bottom: 1px solid rgba(201,149,93,.1);">
+<strong>Teaching:</strong> Maths Stats Tutor at Wits
+</div>
+<div style="padding: .5rem 0;">
+<strong>NSC:</strong> Maths 99%, Physical Sciences 100%
+</div>
+</div>
+</div>
+</div>
+
+<!-- Right: Bio -->
+<div class="col-lg-8">
+<h1 style="font-family: var(--om-font-heading); font-size: 2.5rem; font-weight: 800; margin-bottom: .5rem;">
+About <span class="gradient-text">Odey</span>
+</h1>
+<p style="font-size: 1.15rem; color: var(--om-primary); font-weight: 600; margin-bottom: 1.5rem;">
+Actuarial Science & Mathematical Statistics Graduate
+</p>
+
+<p style="font-size: 1.05rem; line-height: 1.8; color: #5C3D2E;">
+I am an aspiring actuary and statistical researcher currently pursuing an MSc in Mathematical Statistics
+at the University of the Witwatersrand. My dissertation explores a <strong>Multidimensional Climate Risk
+Scorecard using a Bayesian Spatial Copula Framework for Insurance Pricing and Sustainability Strategy
+in KwaZulu-Natal</strong> — combining my passions for spatial statistics, Bayesian methods, and actuarial
+risk modelling into research with real-world climate and insurance applications.
+</p>
+
+<p style="font-size: 1.05rem; line-height: 1.8; color: #5C3D2E;">
+With a BSc in Actuarial Science (where I passed 7 professional actuarial examinations under the
+Institute and Faculty of Actuaries / Actuarial Society of South Africa framework) and a BSc Honours
+in Mathematical Statistics completed with Distinction (final mark of 84% on my research project),
+I bring a unique combination of rigorous quantitative training and applied analytical skill. My
+technical expertise centres on the R programming environment — including tidyverse, ggplot2, caret,
+and spatial packages like gstat and sp — supplemented by strong SQL, advanced Excel, and Power BI
+capabilities.
+</p>
+
+<p style="font-size: 1.05rem; line-height: 1.8; color: #5C3D2E;">
+Beyond coursework, I have demonstrated the ability to work under pressure in competitive settings
+(ASA DataFest 2025 participant, selected as Facilitator for DataFest 2026), deliver top-performing
+survey designs (Applied Sampling), and communicate complex statistical concepts to both academic and
+industry audiences. I currently serve as a Mathematical Statistics Tutor at Wits, teaching first- to
+third-year students in probability, statistical inference, and regression — strengthening both my own
+understanding and my ability to make complex ideas accessible. I am a SAADP (South African
+Actuarial Development Programme), Siyandisa Achievers, and ProMaths Programme alumnus, and I
+scored 99% in Mathematics and 100% in Physical Sciences at NSC level.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- ====== SKILLS ====== -->
+<section class="page-section reveal" style="background: var(--om-gradient-subtle);">
+<div class="container">
+
+<div class="section-header">
+<h2>Technical Expertise</h2>
+<p>A comprehensive toolkit spanning programming, statistical methodology, and actuarial science — refined through academic rigour and applied research.</p>
+</div>
+
+<div class="row g-4">
+
+<!-- Programming -->
+<div class="col-lg-4">
+<div class="skill-category">
+<h3><i class="fas fa-code" style="color: var(--om-primary);"></i> Programming & Tools</h3>
+<div class="progress-bar-container">
+<div class="progress-label"><span>R (tidyverse, ggplot2, caret)</span><span>95%</span></div>
+<div class="progress-track"><div class="progress-fill" style="width: 95%;"></div></div>
+</div>
+<div class="progress-bar-container">
+<div class="progress-label"><span>SQL</span><span>85%</span></div>
+<div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+</div>
+<div class="progress-bar-container">
+<div class="progress-label"><span>Excel (Advanced)</span><span>90%</span></div>
+<div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+</div>
+<div class="progress-bar-container">
+<div class="progress-label"><span>Power BI</span><span>80%</span></div>
+<div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+</div>
+<div class="progress-bar-container">
+<div class="progress-label"><span>LaTeX / Quarto</span><span>75%</span></div>
+<div class="progress-track"><div class="progress-fill" style="width: 75%;"></div></div>
+</div>
+</div>
+</div>
+
+<!-- Statistical Methods -->
+<div class="col-lg-4">
+<div class="skill-category">
+<h3><i class="fas fa-brain" style="color: var(--om-secondary);"></i> Statistical Methods</h3>
+<ul class="method-list">
+<li><i class="fas fa-check-circle"></i> Regression Analysis (Linear, Logistic, Regularised)</li>
+<li><i class="fas fa-check-circle"></i> Spatial Statistics & Geostatistics</li>
+<li><i class="fas fa-check-circle"></i> Predictive Modelling & Machine Learning</li>
+<li><i class="fas fa-check-circle"></i> Time Series Analysis & Forecasting</li>
+<li><i class="fas fa-check-circle"></i> Survival & Reliability Analysis</li>
+<li><i class="fas fa-check-circle"></i> Survey Sampling & Estimation</li>
+<li><i class="fas fa-check-circle"></i> Bayesian Statistics</li>
+<li><i class="fas fa-check-circle"></i> Biostatistics & Clinical Data</li>
+</ul>
+</div>
+</div>
+
+<!-- Actuarial -->
+<div class="col-lg-4">
+<div class="skill-category">
+<h3><i class="fas fa-briefcase" style="color: #7c3aed;"></i> Actuarial Exams</h3>
+<p style="font-size: .85rem; color: #8B7355; margin-bottom: 1rem;">
+Professional examinations under the Institute and Faculty of Actuaries (IFOA) and Actuarial Society of South Africa (ASSA) framework.
+</p>
+<div class="exam-grid">
+<div class="exam-cell passed">A111</div>
+<div class="exam-cell passed">A112</div>
+<div class="exam-cell passed">A211</div>
+<div class="exam-cell passed">A212</div>
+<div class="exam-cell passed">A213</div>
+<div class="exam-cell passed">A113</div>
+<div class="exam-cell passed">N111</div>
+<div class="exam-summary">7 Passed</div>
+</div>
+<p style="font-size: .75rem; color: #8B7355; margin-top: .75rem; margin-bottom: 0;">IFOA/ASSA Professional Examinations</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- ====== EDUCATION ====== -->
+<section class="page-section reveal">
+<div class="container">
+
+<div class="section-header">
+<h2>Education</h2>
+<p>A progressive academic journey through actuarial science and mathematical statistics at the University of the Witwatersrand.</p>
+</div>
+
+<div style="max-width: 720px; margin: 0 auto;">
+
+<div class="timeline">
+
+<!-- MSc -->
+<div class="timeline-item">
+<div class="timeline-dot" style="background: var(--om-primary);">
+<i class="fas fa-graduation-cap"></i>
+</div>
+<div class="d-flex flex-column flex-sm-row justify-content-between align-items-start mb-2">
+<h3>MSc in Mathematical Statistics</h3>
+<span class="year-badge" style="background: rgba(184,92,56,.1); color: var(--om-primary);">In Progress — 2026</span>
+</div>
+<div class="institution">University of the Witwatersrand</div>
+<p style="color: #7A6C5E; font-size: .95rem; line-height: 1.7; margin: 0;">
+Dissertation: <em>Multidimensional Climate Risk Scorecard: A Bayesian Spatial Copula Framework
+for Insurance Pricing and Sustainability Strategy in KwaZulu-Natal.</em> This research integrates
+Bayesian spatial modelling with copula dependence structures to develop a climate risk scorecard
+for insurance pricing, bridging spatial statistics and actuarial science in the context of climate
+change adaptation. Recipient of the Postgraduate Masters Merit Award (2026).
+</p>
+</div>
+
+<!-- Honours -->
+<div class="timeline-item">
+<div class="timeline-dot" style="background: var(--om-secondary);">
+<i class="fas fa-award"></i>
+</div>
+<div class="d-flex flex-column flex-sm-row justify-content-between align-items-start mb-2">
+<h3>BSc Honours in Mathematical Statistics</h3>
+<span class="year-badge" style="background: rgba(201,149,93,.1); color: #8B6D3F;">2025 — Distinction</span>
+</div>
+<div class="institution">University of the Witwatersrand</div>
+<p style="color: #7A6C5E; font-size: .95rem; line-height: 1.7; margin: 0;">
+Graduated with Distinction. Research project scored 84% — the top project in Mathematical
+Statistics Honours. Coursework spanned Spatial Statistics, Statistical Machine Learning, Operations
+Research, Biostatistics, Survival Analysis, and Applied Sampling. Awarded the Liberty Sandton City
+Voucher for Best Honours Mathematical Statistics Student and the Peter Fridjhon Gold Medal for Best
+Honours Research Project.
+</p>
+</div>
+
+<!-- BSc -->
+<div class="timeline-item">
+<div class="timeline-dot" style="background: #7c3aed;">
+<i class="fas fa-calculator"></i>
+</div>
+<div class="d-flex flex-column flex-sm-row justify-content-between align-items-start mb-2">
+<h3>BSc in Actuarial Science</h3>
+<span class="year-badge" style="background: rgba(124,58,237,.1); color: #7c3aed;">2022 — 2024</span>
+</div>
+<div class="institution">University of the Witwatersrand</div>
+<p style="color: #7A6C5E; font-size: .95rem; line-height: 1.7; margin: 0;">
+Comprehensive training in Actuarial Reserving, Survival Analysis, Time Series, Actuarial Economics,
+and Financial Mathematics. Successfully passed 7 professional actuarial examinations under the IFOA/ASSA
+framework during undergraduate studies, demonstrating exceptional discipline and quantitative aptitude.
+</p>
+</div>
+
+<!-- NSC -->
+<div class="timeline-item">
+<div class="timeline-dot" style="background: #5C9A4F;">
+<i class="fas fa-school"></i>
+</div>
+<div class="d-flex flex-column flex-sm-row justify-content-between align-items-start mb-2">
+<h3>National Senior Certificate</h3>
+<span class="year-badge" style="background: rgba(92,154,79,.1); color: #3D6B30;">2021</span>
+</div>
+<div class="institution">Free State, South Africa</div>
+<p style="color: #7A6C5E; font-size: .95rem; line-height: 1.7; margin: 0;">
+Top 100 Achiever in the Free State Province. Scored 99% in Mathematics and 100% in Physical
+Sciences at NSC level — demonstrating early exceptional aptitude in quantitative subjects.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- ====== TEACHING ====== -->
+<section class="page-section reveal" style="background: var(--om-gradient-subtle);">
+<div class="container">
+
+<div class="section-header">
+<h2>Teaching Experience</h2>
+<p>Sharing knowledge and strengthening understanding through academic tutoring.</p>
+</div>
+
+<div style="max-width: 720px; margin: 0 auto;">
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-dot" style="background: var(--om-primary);">
+<i class="fas fa-chalkboard-teacher"></i>
+</div>
+<h3>Mathematical Statistics Tutor</h3>
+<div class="institution">University of the Witwatersrand · 2025–2026</div>
+<p style="color: #7A6C5E; font-size: .95rem; line-height: 1.7; margin: 0;">
+Tutored first- to third-year students in probability, statistical inference, and regression concepts.
+Supported students in developing problem-solving and analytical reasoning skills, while strengthening
+my own communication abilities by explaining complex statistical ideas clearly and accessibly. This
+experience reinforced my belief that teaching is one of the most effective ways to deepen mastery
+of a subject.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- ====== ACHIEVEMENTS ====== -->
+<section class="page-section reveal">
+<div class="container">
+
+<div class="section-header">
+<h2>Achievements & Recognition</h2>
+<p>Milestones earned through academic excellence, competitive performance, and community impact.</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-3 col-6">
+<div class="achievement-card">
+<i class="fas fa-trophy" style="color: var(--om-secondary);"></i>
+<h4>1st Prize Poster</h4>
+<p>SASA Conference 2025</p>
+</div>
+</div>
+
+<div class="col-md-3 col-6">
+<div class="achievement-card">
+<i class="fas fa-medal" style="color: var(--om-primary);"></i>
+<h4>Peter Fridjhon Gold Medal</h4>
+<p>Best Honours Research Project</p>
+</div>
+</div>
+
+<div class="col-md-3 col-6">
+<div class="achievement-card">
+<i class="fas fa-award" style="color: #7c3aed;"></i>
+<h4>Liberty Award</h4>
+<p>Best Honours Stats Student</p>
+</div>
+</div>
+
+<div class="col-md-3 col-6">
+<div class="achievement-card">
+<i class="fas fa-star" style="color: #D4A853;"></i>
+<h4>Masters Merit Award</h4>
+<p>Postgraduate Award 2026</p>
+</div>
+</div>
+
+<div class="col-md-3 col-6">
+<div class="achievement-card">
+<i class="fas fa-percentage" style="color: #5C9A4F;"></i>
+<h4>100%</h4>
+<p>Physical Sciences NSC</p>
+</div>
+</div>
+
+<div class="col-md-3 col-6">
+<div class="achievement-card">
+<i class="fas fa-calculator" style="color: var(--om-primary);"></i>
+<h4>99%</h4>
+<p>Mathematics NSC</p>
+</div>
+</div>
+
+<div class="col-md-3 col-6">
+<div class="achievement-card">
+<i class="fas fa-medal" style="color: #8B7355;"></i>
+<h4>Top 100 Achiever</h4>
+<p>Free State Province</p>
+</div>
+</div>
+
+<div class="col-md-3 col-6">
+<div class="achievement-card">
+<i class="fas fa-user-graduate" style="color: #7c3aed;"></i>
+<h4>SAADP & Siyandisa</h4>
+<p>Development Programme Alumni</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+```

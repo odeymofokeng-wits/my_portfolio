@@ -1,0 +1,158 @@
+---
+title: "Contact"
+---
+
+```{=html}
+
+<!-- ====== CONTACT HERO ====== -->
+<section class="page-section reveal"> 
+<section class="page-section">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+
+<div class="contact-section" style="margin-bottom: 3rem;">
+<h1 style="font-family: var(--om-font-heading); font-size: 2.5rem; font-weight: 800; margin-bottom: .5rem; position: relative; z-index: 1;">
+Let's Work Together
+</h1>
+<p style="font-size: 1.15rem; color: rgba(255,255,255,.85); max-width: 550px; margin: 0 auto 2rem; line-height: 1.7; position: relative; z-index: 1;">
+Available for data science, actuarial consulting, statistical research, and collaborative opportunities.
+</p>
+
+<div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mb-4" style="position: relative; z-index: 1;">
+<a href="mailto:mofokengodey@gmail.com" class="contact-btn contact-btn-white">
+<i class="fas fa-envelope"></i> mofokengodey@gmail.com
+</a>
+<a href="tel:+27639633131" class="contact-btn contact-btn-outline">
+<i class="fas fa-phone"></i> +27 63 963 3131
+</a>
+</div>
+
+<div class="d-flex justify-content-center gap-4" style="position: relative; z-index: 1;">
+<a href="https://www.linkedin.com/in/odey-mofokeng-94b043238/" target="_blank" style="font-size: 1.5rem; color: white;"><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/odeymofokeng-wits" target="_blank" style="font-size: 1.5rem; color: white;"><i class="fab fa-github"></i></a>
+</div>
+</div>
+
+<!-- Contact Details Cards -->
+<div class="row g-4">
+
+<div class="col-md-6">
+<div class="stat-card" style="text-align: left; padding: 2rem;">
+<div class="d-flex align-items-center gap-3 mb-3">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(30,58,138,.1); display: flex; align-items: center; justify-content: center;">
+<i class="fas fa-envelope" style="font-size: 1.2rem; color: var(--om-primary);"></i>
+</div>
+<div>
+<h4 style="font-family: var(--om-font-body); font-weight: 700; font-size: 1rem; margin: 0;">Email</h4>
+<p style="font-size: .9rem; color: #64748b; margin: 0;">Preferred contact method</p>
+</div>
+</div>
+<a href="mailto:mofokengodey@gmail.com" style="font-weight: 600; color: var(--om-primary); text-decoration: none; font-size: .95rem;">mofokengodey@gmail.com</a>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="stat-card" style="text-align: left; padding: 2rem;">
+<div class="d-flex align-items-center gap-3 mb-3">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(5,150,105,.1); display: flex; align-items: center; justify-content: center;">
+<i class="fas fa-phone" style="font-size: 1.2rem; color: #059669;"></i>
+</div>
+<div>
+<h4 style="font-family: var(--om-font-body); font-weight: 700; font-size: 1rem; margin: 0;">Phone</h4>
+<p style="font-size: .9rem; color: #64748b; margin: 0;">Available during business hours</p>
+</div>
+</div>
+<a href="tel:+27639633131" style="font-weight: 600; color: var(--om-primary); text-decoration: none; font-size: .95rem;">+27 63 963 3131</a>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="stat-card" style="text-align: left; padding: 2rem;">
+<div class="d-flex align-items-center gap-3 mb-3">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,.1); display: flex; align-items: center; justify-content: center;">
+<i class="fab fa-linkedin" style="font-size: 1.2rem; color: #3b82f6;"></i>
+</div>
+<div>
+<h4 style="font-family: var(--om-font-body); font-weight: 700; font-size: 1rem; margin: 0;">LinkedIn</h4>
+<p style="font-size: .9rem; color: #64748b; margin: 0;">Professional network & updates</p>
+</div>
+</div>
+<a href="https://www.linkedin.com/in/odey-mofokeng-94b043238/" target="_blank" style="font-weight: 600; color: var(--om-primary); text-decoration: none; font-size: .95rem;">Odey Mofokeng</a>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="stat-card" style="text-align: left; padding: 2rem;">
+<div class="d-flex align-items-center gap-3 mb-3">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(124,58,237,.1); display: flex; align-items: center; justify-content: center;">
+<i class="fab fa-github" style="font-size: 1.2rem; color: #7c3aed;"></i>
+</div>
+<div>
+<h4 style="font-family: var(--om-font-body); font-weight: 700; font-size: 1rem; margin: 0;">GitHub</h4>
+<p style="font-size: .9rem; color: #64748b; margin: 0;">Code repositories & portfolio</p>
+</div>
+</div>
+<a href="https://github.com/odeymofokeng-wits" target="_blank" style="font-weight: 600; color: var(--om-primary); text-decoration: none; font-size: .95rem;">odeymofokeng-wits</a>
+</div>
+</div>
+
+<div class="col-12">
+<div class="stat-card" style="text-align: left; padding: 2rem;">
+<div class="d-flex align-items-center gap-3 mb-3">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(245,158,11,.1); display: flex; align-items: center; justify-content: center;">
+<i class="fas fa-map-marker-alt" style="font-size: 1.2rem; color: #f59e0b;"></i>
+</div>
+<div>
+<h4 style="font-family: var(--om-font-body); font-weight: 700; font-size: 1rem; margin: 0;">Location</h4>
+<p style="font-size: .9rem; color: #64748b; margin: 0;">Based in Gauteng, South Africa</p>
+</div>
+</div>
+<span style="font-weight: 600; color: var(--om-primary); font-size: .95rem;">Lenasia South, Gauteng, South Africa</span>
+</div>
+</div>
+
+</div>
+
+<!-- What I'm Looking For -->
+<div class="mt-5" style="background: white; border: 1px solid rgba(148,163,184,.12); border-radius: var(--om-radius-lg); padding: 2.5rem;">
+<h3 style="font-family: var(--om-font-heading); font-size: 1.5rem; font-weight: 800; margin-bottom: 1.25rem;">
+What I'm Looking For
+</h3>
+<p style="color: #475569; line-height: 1.8; margin-bottom: 1.5rem;">
+I am actively seeking opportunities that leverage my combined expertise in actuarial science and 
+mathematical statistics. Whether it is a full-time role, a consulting engagement, or a research 
+collaboration, I am eager to apply my quantitative skills to challenging, real-world problems.
+</p>
+
+<div class="row g-3">
+<div class="col-md-4">
+<div style="background: #f8fafc; border-radius: .75rem; padding: 1.25rem; text-align: center;">
+<i class="fas fa-chart-bar" style="font-size: 1.5rem; color: var(--om-primary); margin-bottom: .5rem;"></i>
+<h5 style="font-family: var(--om-font-body); font-size: .95rem; font-weight: 700; margin: 0 0 .25rem;">Data Science</h5>
+<p style="font-size: .8rem; color: #64748b; margin: 0;">Predictive modelling, spatial analysis, ML</p>
+</div>
+</div>
+<div class="col-md-4">
+<div style="background: #f8fafc; border-radius: .75rem; padding: 1.25rem; text-align: center;">
+<i class="fas fa-calculator" style="font-size: 1.5rem; color: var(--om-secondary); margin-bottom: .5rem;"></i>
+<h5 style="font-family: var(--om-font-body); font-size: .95rem; font-weight: 700; margin: 0 0 .25rem;">Actuarial Consulting</h5>
+<p style="font-size: .8rem; color: #64748b; margin: 0;">Reserving, pricing, risk modelling</p>
+</div>
+</div>
+<div class="col-md-4">
+<div style="background: #f8fafc; border-radius: .75rem; padding: 1.25rem; text-align: center;">
+<i class="fas fa-flask" style="font-size: 1.5rem; color: #7c3aed; margin-bottom: .5rem;"></i>
+<h5 style="font-family: var(--om-font-body); font-size: .95rem; font-weight: 700; margin: 0 0 .25rem;">Statistical Research</h5>
+<p style="font-size: .8rem; color: #64748b; margin: 0;">Geostatistics, biostatistics, methodology</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+```
+
